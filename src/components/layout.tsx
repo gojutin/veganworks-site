@@ -6,19 +6,22 @@
  */
 
 import React from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
-import Footer from "./footer";
 
-const Container = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
+const GlobalStyle = createGlobalStyle`
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+    color: #333;
+    background: #111;
+  }
 `;
 
-const Title = styled.div`
-  font-size: 30px;
-  padding: 10px;
-  margin-bottom: 20px;
+const Main = styled.div`
+  margin: 0px;
+  padding: 0px;
 `;
 
 const Layout = ({ children }) => {
@@ -36,11 +39,10 @@ const Layout = ({ children }) => {
   const { siteMetadata } = data.site;
 
   return (
-    <Container>
-      <Title>{siteMetadata.title.toUpperCase()} 🌟</Title>
-      <main>{children}</main>
-      <Footer />
-    </Container>
+    <Main>
+      <GlobalStyle />
+      {children}
+    </Main>
   );
 };
 

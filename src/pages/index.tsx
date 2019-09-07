@@ -1,26 +1,24 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import TitleSection from "../components/sections/title-section";
+import SnackBoxesSection from "../components/sections/snack-boxes-section";
+import MailingListSection from "../components/sections/mailing-list-section";
+import ContactFormSection from "../components/sections/contact-form-section";
+import FavoriteBrandsSection from "../components/sections/favorite-brands-section";
+import CommunitySolidaritySection from "../components/sections/community-solidarity-section";
+import Footer from "../components/footer";
 
 const App = () => (
   <Layout>
-    <SEO title="Home" keywords={[`neutron`, `proton`, `quark`, `physics`]} />
-
-    <code
-      css={`
-        background: #333;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 1.2vw;
-        @media (max-width: 800px) {
-          font-size: 1.8vw;
-        }
-      `}
-    >
-      gatsby new my-app
-      https://github.com/gojutin/gatsby-starter-typescript-deluxe.git
-    </code>
+    <SEO />
+    <TitleSection />
+    <SnackBoxesSection />
+    <FavoriteBrandsSection />
+    <CommunitySolidaritySection />
+    <MailingListSection />
+    <Footer />
+    {/* <ContactFormSection /> */}
   </Layout>
 );
 

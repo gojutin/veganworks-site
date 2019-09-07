@@ -1,25 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import GithubLink from "./github-link";
 
 const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #efefef;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px;
+  background: #111;
+  color: white;
+  text-align: center;
+  font-family: Alice;
+  height: 50px;
 `;
 
 const Footer = () => {
-  return (
-    <StyledFooter>
-      <GithubLink />
-    </StyledFooter>
-  );
+  return <StyledFooter>&reg; 2019 VeganWorks, Inc.</StyledFooter>;
 };
 
 export default Footer;
