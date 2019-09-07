@@ -17,7 +17,7 @@ const FavoriteBrandsSection: React.FC = () => {
         edges {
           node {
             childImageSharp {
-              fixed(height: 80) {
+              fixed(height: 120) {
                 ...GatsbyImageSharpFixed
               }
             }
