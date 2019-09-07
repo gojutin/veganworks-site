@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Input = styled(motion.input).attrs(props => ({
   initial: { scale: 0.9, background: "#333" },
-  animate: { scale: 1, background: "#555" },
+  animate: { scale: 1, background: "#efefef" },
   transition: { duration: 1 },
 }))`
   width: 100%;
@@ -13,7 +13,7 @@ const Input = styled(motion.input).attrs(props => ({
   border: 2px solid #333;
   border-radius: 100px;
   outline: none;
-  color: white;
+  color: #333;
   ::placeholder {
     color: #999;
   }

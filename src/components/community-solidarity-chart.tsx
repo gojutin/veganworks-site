@@ -18,7 +18,7 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
     <section
       ref={ref}
       css={`
-        background: white;
+        background: black;
         padding: 80px 10px;
       `}
     >
@@ -35,6 +35,9 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
             percent={0.76}
             hideText
             colors={["red", "limegreen"]}
+            needleColor="#dadada"
+            needleBaseColor="#333"
+            arcWidth={0.2}
           />
           <motion.div
             initial={{ scale: 0 }}
@@ -68,7 +71,7 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
               <span className="lbs">{lbs}</span> POUNDS
             </h3>
             <p>of fresh groceries and counting!</p>
-            <p style={{ color: "#333", paddingTop: "20px", fontSize: "16px" }}>
+            <p style={{ color: "white", paddingTop: "20px", fontSize: "16px" }}>
               For every dollar donated, Community Solidarity is able to provide
               8 pounds of fresh groceries to a family in need.
             </p>
