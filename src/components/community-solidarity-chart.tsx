@@ -2,6 +2,7 @@ import React from "react";
 import GaugeChart from "react-gauge-chart";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 
 type CommunitySolidarityChartProps = {
   lbs: number;
@@ -68,7 +69,10 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
             `}
           >
             <h3>
-              <span className="lbs">{lbs}</span> POUNDS
+              <span className="lbs">
+                <CountUp end={lbs} />
+              </span>{" "}
+              POUNDS
             </h3>
             <p>of fresh groceries and counting!</p>
             <p style={{ color: "white", paddingTop: "20px", fontSize: "16px" }}>

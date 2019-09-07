@@ -10,8 +10,8 @@ const Button = styled(motion.button)<{ theme }>`
   justify-content: center;
   border-radius: 10px;
   min-width: 200px;
-  background: rgba(20, 126, 255, 0.3);
-  border: 2px solid steelblue;
+  background: transparent;
+  border: 2px solid #333;
   font-size: 20px;
   margin: 10px auto;
   cursor: pointer;
@@ -51,7 +51,6 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({
   const imageData = data.file.childImageSharp.fixed;
 
   const animateSettings = {
-    // scale: 1.05,
     boxShadow: "0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.1)",
     scale: 1.02,
   };

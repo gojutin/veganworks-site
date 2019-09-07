@@ -33,13 +33,7 @@ const BackgroundSection = () => (
       const imageData = data.desktop.childImageSharp.fluid;
       const logoData = data.icon.childImageSharp.fluid;
       return (
-        <div
-          css={`
-            position: sticky;
-            top: 0;
-            z-index: -100;
-          `}
-        >
+        <div>
           <BackgroundImage
             Tag="section"
             fluid={imageData}
@@ -58,7 +52,7 @@ const BackgroundSection = () => (
           >
             <Img
               style={{
-                width: "100%",
+                width: "90%",
                 maxWidth: "600px",
               }}
               fluid={logoData}

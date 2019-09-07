@@ -9,14 +9,14 @@ const Button = styled(motion.button)<{ theme }>`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  min-width: 200px;
+  min-width: 180px;
   background: rgba(71, 138, 245, 0.2);
   border: 2px solid #efefef;
-  font-size: 20px;
+  font-size: 18px;
   margin: 10px auto;
   cursor: pointer;
   box-shadow: none;
-  padding: 8px 18px;
+  padding: 4px 18px;
   outline: none;
   color: #efefef;
 `;
@@ -40,7 +40,7 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({
         childImageSharp {
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.
-          fixed(width: 35, height: 35) {
+          fixed(width: 30, height: 30) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -50,7 +50,6 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({
 
   const imageData = data.file.childImageSharp.fixed;
   const animateSettings = {
-    // scale: 1.05,
     boxShadow: "0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.1)",
     scale: 1.02,
   };
