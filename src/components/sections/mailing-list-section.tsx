@@ -6,14 +6,14 @@ import Button from "../button";
 import NetlifyForm from "react-netlify-form";
 
 const Feedback = styled.p<{ color?: string }>`
-  color: #efefef;
+  color: #333;
   font-family: Alice;
   font-size: 19px;
 `;
 
 const MailingListSection = () => {
   return (
-    <Section title="Join our mailing list" bg="magenta" titleColor="#333">
+    <Section title="Join our mailing list" bg="#bdfff4" titleColor="#333">
       <NetlifyForm name="newsletter">
         {({ loading, error, success }) => {
           if (success) {
