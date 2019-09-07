@@ -10,7 +10,7 @@ const Button = styled(motion.button)<{ theme }>`
   justify-content: center;
   border-radius: 10px;
   min-width: 200px;
-  background: white;
+  background: rgba(20, 126, 255, 0.3);
   border: 2px solid steelblue;
   font-size: 20px;
   margin: 10px auto;
@@ -40,7 +40,7 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({
         childImageSharp {
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.
-          fixed(width: 35, height: 35) {
+          fixed(width: 25, height: 25) {
             ...GatsbyImageSharpFixed
           }
         }

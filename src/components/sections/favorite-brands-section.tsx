@@ -41,7 +41,7 @@ const FavoriteBrandsSection: React.FC = () => {
             <div
               key={i}
               css={`
-                margin: 20px 50px;
+                margin: 20px 40px;
                 width: 200px;
                 text-align: center;
               `}
