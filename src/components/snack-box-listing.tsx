@@ -65,7 +65,6 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
           <Price slashed>${data.Price}</Price>
 
           <Price>${data.Sale_Price}</Price>
-          <Tag>sale</Tag>
         </article>
       ) : (
         <Price>${data.Price}</Price>

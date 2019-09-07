@@ -49,16 +49,15 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({
   `);
 
   const imageData = data.file.childImageSharp.fixed;
+
+  const animateSettings = {
+    // scale: 1.05,
+    boxShadow: "0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.1)",
+    scale: 1.02,
+  };
   return (
     <A href={url} target="_blank" rel="noopener noreferrer">
-      <Button
-        whileHover={{
-          // scale: 1.05,
-          boxShadow:
-            "0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.1)",
-          scale: 1.02,
-        }}
-      >
+      <Button whileHover={animateSettings} whileTap={animateSettings}>
         <Img fixed={imageData} />
 
         <span

@@ -9,7 +9,6 @@ const ProductsWrapper = styled.section`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
 `;
 
 type ProductsSectionProps = {};

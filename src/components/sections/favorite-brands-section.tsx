@@ -38,13 +38,16 @@ const FavoriteBrandsSection: React.FC = () => {
       <Wrapper>
         {data.allFile.edges.map(({ node }, i) => {
           return (
-            <Img
+            <div
               key={i}
-              fixed={node.childImageSharp.fixed}
               css={`
-                margin: 50px;
+                margin: 20px 50px;
+                width: 200px;
+                text-align: center;
               `}
-            />
+            >
+              <Img fixed={node.childImageSharp.fixed} />
+            </div>
           );
         })}
       </Wrapper>

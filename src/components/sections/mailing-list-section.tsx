@@ -13,7 +13,7 @@ const Feedback = styled.p<{ color?: string }>`
 
 const MailingListSection = () => {
   return (
-    <Section title="Join our Mailing List" bg="magenta" titleColor="#333">
+    <Section title="Join our mailing list" bg="magenta" titleColor="#333">
       <NetlifyForm name="newsletter">
         {({ loading, error, success }) => {
           if (success) {
