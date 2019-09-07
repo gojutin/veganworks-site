@@ -38,8 +38,10 @@
     "gatsby-transformer-sharp": "^2.2.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-gauge-chart": "^0.2.1",
     "react-helmet": "^5.2.1",
     "react-intersection-observer": "^8.24.1",
+    "react-minimal-pie-chart": "^5.0.1",
     "react-netlify-form": "^2.1.5",
     "styled-components": "^4.3.2"
   },

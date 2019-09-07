@@ -24,6 +24,10 @@ const config = {
             baseId: process.env.AIRTABLE_BASE_ID,
             tableName: `SnackBoxes`,
           },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `Stats`,
+          },
         ],
       },
     },

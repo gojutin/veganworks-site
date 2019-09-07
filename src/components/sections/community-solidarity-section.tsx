@@ -3,6 +3,7 @@ import { graphql, StaticQuery } from "gatsby";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
+import CommunitySolidarityChart from "../community-solidarity-chart";
 
 const Box = styled.div`
   height: 200px;
@@ -50,38 +51,57 @@ const BackgroundSection = () => (
             }
           }
         }
+
+        stats: allAirtable(filter: { table: { eq: "Stats" } }) {
+          edges {
+            node {
+              data {
+                Pounds
+              }
+            }
+          }
+        }
       }
     `}
     render={data => {
       // Set ImageData.
       const imageData = data.desktop.childImageSharp.fluid;
       const csLogo = data.csLogo.childImageSharp.fluid;
+
+      const lbs = data.stats.edges.reduce((accum, value) => {
+        return value.node.data.Pounds + accum;
+      }, 0);
+
       return (
-        <BackgroundImage
-          Tag="section"
-          fluid={imageData}
-          // backgroundColor={`#040e18`}
-          style={{
-            height: "100vh",
-            width: "100%",
-            backgroundSize: "cover",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            margin: 0,
-          }}
-        >
-          <Box>
-            <h4>For every snack box sold, we donate 25 cents to</h4>
-            <Img fluid={csLogo} />
-            <p>
-              Learn more at{" "}
-              <a href="https://www.communitysolidarity.org">
-                communitysolidarity.org
-              </a>
-            </p>
-          </Box>
-        </BackgroundImage>
+        <div>
+          <BackgroundImage
+            Tag="section"
+            fluid={imageData}
+            // backgroundColor={`#040e18`}
+            style={{
+              height: "100vh",
+              width: "100%",
+              backgroundSize: "cover",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              margin: 0,
+            }}
+          >
+            <Box>
+              <h4>For every snack box sold, we donate 25 cents to</h4>
+              <Img fluid={csLogo} />
+              <p>
+                Learn more at{" "}
+                <a href="https://www.communitysolidarity.org">
+                  CommunitySolidarity.org
+                </a>
+              </p>
+            </Box>
+          </BackgroundImage>
+          <CommunitySolidarityChart lbs={lbs} />
+        </div>
       );
     }}
   />
