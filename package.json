@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "dev": "npm run develop",
+    "dev": "netlify dev",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
     "test": "jest --watch",
     "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx || exit 0",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "date-fns": "^2.0.1",
+    "dotenv": "^8.1.0",
     "framer-motion": "^1.6.7",
     "gatsby": "^2.13.41",
     "gatsby-background-image": "^0.8.9",

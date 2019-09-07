@@ -10,15 +10,15 @@ const Button = styled(motion.button)<{ theme }>`
   justify-content: center;
   border-radius: 10px;
   min-width: 200px;
-  background: rgba(71, 138, 245, 0.2);
-  border: 2px solid #efefef;
+  background: white;
+  border: 2px solid steelblue;
   font-size: 20px;
   margin: 10px auto;
   cursor: pointer;
   box-shadow: none;
-  padding: 10px 18px;
+  padding: 5px 18px;
   outline: none;
-  color: #efefef;
+  color: #333;
 `;
 
 const A = styled.a`
@@ -36,7 +36,7 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({
 }) => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "amazon-logo-white.png" }) {
+      file(relativePath: { eq: "amazon-logo-black.png" }) {
         childImageSharp {
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.

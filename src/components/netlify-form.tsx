@@ -1,6 +1,5 @@
 import React from "react";
 import NetlifyForm from "react-netlify-form";
-import Button from "./button";
 
 interface NetlifyFormProps {
   formName?: string;
@@ -23,15 +22,23 @@ const NetlifyFormComponent: React.FC<NetlifyFormProps> = ({
         }
 
         return (
-          <div>
+          <div
+            css={`
+              text-align: center;
+            `}
+          >
             <input type="hidden" name="form-name" value={formName} />
             {children}
 
-            <Button type="submit" disabled={loading}>
-              Submit
-            </Button>
-
-            {success && successMessage}
+            {success && (
+              <p
+                css={`
+                  color: green;
+                `}
+              >
+                {successMessage}
+              </p>
+            )}
             {error && "Ooops"}
           </div>
         );

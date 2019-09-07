@@ -8,7 +8,7 @@ const Input = styled(motion.input).attrs(props => ({
 }))`
   width: 100%;
   max-width: 300px;
-  font-size: 22px;
+  font-size: 20px;
   padding: 10px 20px;
   border: 2px solid #333;
   border-radius: 100px;

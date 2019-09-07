@@ -1,3 +1,6 @@
+const path = require("path");
+require("dotenv");
+
 const config = {
   siteMetadata: {
     title: `VeganWorks`,
@@ -8,7 +11,7 @@ const config = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images`,
+        path: path.join(__dirname, `src`, `images`),
         name: "images",
       },
     },

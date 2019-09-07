@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const Button = styled(motion.button).attrs(props => ({
   whileHover: { scale: 1.1 },
-  transition: { duration: 1 },
+  transition: { duration: 0.3 },
 }))`
   width: 100px;
-  height: 50px;
+  height: 40px;
   font-size: 20px;
   border: 2px solid #333;
   border-radius: 100px;

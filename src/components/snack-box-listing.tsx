@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AmazonButton from "./amazon-button";
+import AmazonButtonShop from "./amazon-button-shop";
 
 const Wrapper = styled.article`
   padding: 10px;
@@ -27,17 +27,18 @@ const Title = styled.h2`
 
 const Tag = styled.small`
   display: inline-block;
-  background: lightblue;
+  background: rgba(4, 204, 57, 0.3);
   border-radius: 10px;
-  padding: 3px 8px;
+  padding: 1px 8px;
   margin: 0px 10px;
+  color: #3c9654;
 `;
 
 const Price = styled.div<{ slashed?: boolean }>`
-  color: ${p => (p.slashed ? "gray" : "green")};
+  color: ${p => (p.slashed ? "#666" : "#04b534")};
   text-decoration: ${p => (p.slashed ? "line-through" : "none")};
   font-weight: bold;
-  font-size: 24px;
+  font-size: ${p => (p.slashed ? "12px" : "30px")};
   margin-right: ${p => (p.slashed ? "10px" : "0px")};
 `;
 
@@ -62,6 +63,7 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
           `}
         >
           <Price slashed>${data.Price}</Price>
+
           <Price>${data.Sale_Price}</Price>
           <Tag>sale</Tag>
         </article>
@@ -70,7 +72,7 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
       )}
 
       <small>{data.Availability}</small>
-      {!isHolidaySeason && <AmazonButton url={data.Link} />}
+      {!isHolidaySeason && <AmazonButtonShop url={data.Link} />}
     </Wrapper>
   );
 };

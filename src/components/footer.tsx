@@ -3,17 +3,23 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: #111;
   color: white;
   text-align: center;
   font-family: Alice;
-  height: 50px;
+  height: 70px;
 `;
 
 const Footer = () => {
-  return <StyledFooter>&reg; 2019 VeganWorks, Inc.</StyledFooter>;
+  return (
+    <StyledFooter>
+      <span>info@veganworks.com</span>
+      <span>&reg; 2019 VeganWorks, Inc.</span>
+    </StyledFooter>
+  );
 };
 
 export default Footer;
