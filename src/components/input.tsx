@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Input = styled(motion.input).attrs(props => ({
-  initial: { scale: 0.9, background: "#333" },
-  animate: { scale: 1, background: "#efefef" },
+  initial: { scale: 0.9, background: "#dadada" },
+  animate: { scale: 1, background: "white" },
   transition: { duration: 1 },
 }))`
   width: 100%;

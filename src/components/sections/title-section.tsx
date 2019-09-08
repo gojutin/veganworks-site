@@ -58,7 +58,11 @@ const BackgroundSection = () => (
               fluid={logoData}
             />
 
-            <div>
+            <div
+              css={`
+                margin-top: 30px;
+              `}
+            >
               <AmazonButton
                 title="Visit our Amazon Store"
                 url="https://www.amazon.com/stores/VeganWorks/VeganWorks/page/E2CD3E05-F08E-470F-BD10-F668DA807157"
