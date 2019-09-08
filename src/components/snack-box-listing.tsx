@@ -34,7 +34,7 @@ const Price = styled.div<{ slashed?: boolean }>`
 `;
 
 type SnackBoxListingProps = {
-  data: object;
+  data: any;
 };
 
 const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
@@ -42,7 +42,7 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
   const isHolidaySeason = [1, 2, 3, 4, 10, 11, 12].includes(month);
   return (
     <Wrapper>
-      <Image src={data.Image[0].url} />
+      <Image src={data.Image[0].url} alt={data.Name} />
       <Title>{data.Name}</Title>
       {data.Sale_Price ? (
         <article
