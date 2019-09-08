@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const Button = styled(motion.button).attrs(props => ({
+const Button = styled(motion.button).attrs(() => ({
   whileHover: { scale: 1.1 },
   transition: { duration: 0.3 },
 }))`

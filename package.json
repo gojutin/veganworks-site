@@ -42,7 +42,6 @@
     "react-gauge-chart": "^0.2.1",
     "react-helmet": "^5.2.1",
     "react-intersection-observer": "^8.24.1",
-    "react-minimal-pie-chart": "^5.0.1",
     "react-netlify-form": "^2.1.5",
     "styled-components": "^4.3.2",
     "use-media": "^1.4.0"
@@ -82,12 +81,5 @@
     "react-testing-library": "^8.0.1",
     "ts-jest": "^24.0.2",
     "typescript": "^3.6.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gojutin/gatsby-starter-typescript-deluxe"
-  },
-  "bugs": {
-    "url": "https://github.com/gojutin/gatsby-starter-typescript-deluxe/issues"
   }
 }

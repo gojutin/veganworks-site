@@ -25,15 +25,6 @@ const Title = styled.h2`
   margin: 8px 0px;
 `;
 
-const Tag = styled.small`
-  display: inline-block;
-  background: rgba(4, 204, 57, 0.3);
-  border-radius: 10px;
-  padding: 1px 8px;
-  margin: 0px 10px;
-  color: #3c9654;
-`;
-
 const Price = styled.div<{ slashed?: boolean }>`
   color: ${p => (p.slashed ? "#666" : "#45a165")};
   text-decoration: ${p => (p.slashed ? "line-through" : "none")};
@@ -43,7 +34,7 @@ const Price = styled.div<{ slashed?: boolean }>`
 `;
 
 type SnackBoxListingProps = {
-  data: any;
+  data: object;
 };
 
 const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {

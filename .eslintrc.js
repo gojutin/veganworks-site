@@ -39,6 +39,7 @@ module.exports = {
     "@typescript-eslint/no-extraneous-class": 2,
     "@typescript-eslint/no-explicit-any": 1,
     "@typescript-eslint/no-empty-interface": 1,
+    "@typescript-eslint/prefer-interface": 0,
     strict: 2,
     "no-var": 2,
     "prefer-const": 2,
@@ -47,7 +48,7 @@ module.exports = {
     "immutable/no-let": 2,
     "immutable/no-this": 2,
     "immutable/no-mutation": 2,
-    "sort-keys": 2,
+    "sort-keys": 0,
   },
   overrides: [
     // Override some TypeScript rules just for .js files

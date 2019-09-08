@@ -29,28 +29,28 @@ const BackgroundSection = () => (
       const imageData = data.desktop.childImageSharp.fluid;
       const logoData = data.icon.childImageSharp.fluid;
       return (
-        <div>
+        <section>
           <BackgroundImage
             Tag="section"
             fluid={imageData}
             alt="VeganWorks Products Display"
             style={{
-              height: "100%",
-              minHeight: "100vh",
-              width: "100%",
+              alignItems: "center",
               backgroundSize: "cover",
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
+              height: "100%",
               justifyContent: "center",
               margin: 0,
+              minHeight: "100vh",
+              width: "100%",
               zIndex: 0,
             }}
           >
             <Img
               style={{
-                width: "90%",
                 maxWidth: "600px",
+                width: "90%",
               }}
               fluid={logoData}
               alt="VeganWorks Logo"
@@ -69,7 +69,7 @@ const BackgroundSection = () => (
 
             {/* </motion.div> */}
           </BackgroundImage>
-        </div>
+        </section>
       );
     }}
   />

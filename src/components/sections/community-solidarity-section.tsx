@@ -77,7 +77,7 @@ const BackgroundSection = () => (
       }, 0);
 
       return (
-        <div>
+        <section>
           <BackgroundImage
             Tag="section"
             fluid={imageData}
@@ -106,7 +106,7 @@ const BackgroundSection = () => (
             </Box>
           </BackgroundImage>
           <CommunitySolidarityChart lbs={lbs} />
-        </div>
+        </section>
       );
     }}
   />

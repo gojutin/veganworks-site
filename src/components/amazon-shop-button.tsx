@@ -27,14 +27,10 @@ const A = styled.a`
 
 type AmazonButtonProps = {
   url: string;
-  title?: string;
+  isAvailable: boolean;
 };
 
-const AmazonButton: React.FC<AmazonButtonProps> = ({
-  url,
-  title = "Shop Now!",
-  isAvailable,
-}) => {
+const AmazonButton: React.FC<AmazonButtonProps> = ({ url, isAvailable }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "amazon-logo-black.png" }) {

@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import Section from "../section";
-import { useMediaLayout } from "use-media";
 
 const Wrapper = styled.div`
   display: flex;
@@ -14,7 +13,6 @@ const Wrapper = styled.div`
 `;
 
 const FavoriteBrandsSection: React.FC = () => {
-  const isMobile = useMediaLayout({ maxWidth: 500 });
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { relativePath: { regex: "/brands/*/" } }) {

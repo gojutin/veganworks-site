@@ -1,5 +1,4 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
 
 type SectionProps = {
   title?: string;
@@ -13,13 +12,8 @@ const Section: React.FC<SectionProps> = ({
   bg = "white",
   children,
 }) => {
-  const [ref, inView, entry] = useInView({
-    /* Optional options */
-    threshold: 0,
-  });
   return (
     <section
-      ref={ref}
       css={`
         background: ${bg};
         padding: 40px 10px;
