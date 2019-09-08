@@ -3,8 +3,7 @@ import { graphql, StaticQuery } from "gatsby";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
-import AmazonButton from "../amazon-button";
-import { motion } from "framer-motion";
+import AmazonStoreButton from "../amazon-store-button";
 
 const BackgroundSection = () => (
   <StaticQuery
@@ -19,8 +18,6 @@ const BackgroundSection = () => (
         }
         icon: file(relativePath: { eq: "veganworks-logo.png" }) {
           childImageSharp {
-            # Specify the image processing specifications right in the query.
-            # Makes it trivial to update as your page's design changes.
             fluid(quality: 90, maxWidth: 420) {
               ...GatsbyImageSharpFluid_noBase64
             }
@@ -29,7 +26,6 @@ const BackgroundSection = () => (
       }
     `}
     render={data => {
-      // Set ImageData.
       const imageData = data.desktop.childImageSharp.fluid;
       const logoData = data.icon.childImageSharp.fluid;
       return (
@@ -39,7 +35,8 @@ const BackgroundSection = () => (
             fluid={imageData}
             // backgroundColor={`#040e18`}
             style={{
-              height: "100vh",
+              height: "100%",
+              minHeight: "100vh",
               width: "100%",
               backgroundSize: "cover",
               display: "flex",
@@ -60,10 +57,10 @@ const BackgroundSection = () => (
 
             <div
               css={`
-                margin-top: 30px;
+                margin-top: 50px;
               `}
             >
-              <AmazonButton
+              <AmazonStoreButton
                 title="Visit our Amazon Store"
                 url="https://www.amazon.com/stores/VeganWorks/VeganWorks/page/E2CD3E05-F08E-470F-BD10-F668DA807157"
               />

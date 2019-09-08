@@ -3,21 +3,25 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import Section from "../section";
+import { useMediaLayout } from "use-media";
 
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
 `;
 
 const FavoriteBrandsSection: React.FC = () => {
+  const isMobile = useMediaLayout({ maxWidth: 500 });
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { relativePath: { regex: "/brands/*/" } }) {
         edges {
           node {
             childImageSharp {
-              fixed(height: 120) {
+              fixed(height: 100) {
                 ...GatsbyImageSharpFixed
               }
             }
@@ -42,7 +46,7 @@ const FavoriteBrandsSection: React.FC = () => {
               key={i}
               css={`
                 margin: 20px 40px;
-                width: 200px;
+                width: 140px;
                 text-align: center;
               `}
             >

@@ -44,7 +44,8 @@
     "react-intersection-observer": "^8.24.1",
     "react-minimal-pie-chart": "^5.0.1",
     "react-netlify-form": "^2.1.5",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "use-media": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

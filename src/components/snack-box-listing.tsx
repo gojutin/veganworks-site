@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AmazonButtonShop from "./amazon-button-shop";
+import AmazonShopButton from "./amazon-shop-button";
 
 const Wrapper = styled.article`
   padding: 10px;
@@ -71,7 +71,7 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
       )}
 
       <small>{data.Availability}</small>
-      {!isHolidaySeason && <AmazonButtonShop url={data.Link} />}
+      <AmazonShopButton url={data.Link} isAvailable={isHolidaySeason} />
     </Wrapper>
   );
 };

@@ -4,13 +4,13 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import { motion } from "framer-motion";
 
-const Button = styled(motion.button)<{ theme }>`
+const Button = styled(motion.button)`
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   min-width: 180px;
-  background: rgba(71, 138, 245, 0.2);
+  background: rgba(71, 138, 245, 0.3);
   border: 2px solid #efefef;
   font-size: 18px;
   margin: 10px auto;
@@ -30,10 +30,7 @@ type AmazonButtonProps = {
   title?: string;
 };
 
-const AmazonButton: React.FC<AmazonButtonProps> = ({
-  url,
-  title = "Shop Now!",
-}) => {
+const AmazonButton: React.FC<AmazonButtonProps> = ({ url }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "amazon-logo-white.png" }) {
@@ -60,10 +57,10 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({
 
         <span
           css={`
-            margin-left: 10px;
+            margin: 5px 0px 5px 10px;
           `}
         >
-          {title}
+          View our Amazon store
         </span>
       </Button>
     </A>

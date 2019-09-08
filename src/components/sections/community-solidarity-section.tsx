@@ -22,6 +22,10 @@ const Box = styled.div`
   a {
     text-decoration: none;
     color: lightskyblue;
+
+    :hover {
+      text-decoration: underline;
+    }
   }
   p {
     padding: 0;

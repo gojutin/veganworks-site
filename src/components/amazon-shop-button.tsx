@@ -10,7 +10,7 @@ const Button = styled(motion.button)<{ theme }>`
   justify-content: center;
   border-radius: 10px;
   min-width: 200px;
-  background: transparent;
+  background: rgba(71, 138, 240, 0.1);
   border: 2px solid #333;
   font-size: 20px;
   margin: 10px auto;
@@ -33,6 +33,7 @@ type AmazonButtonProps = {
 const AmazonButton: React.FC<AmazonButtonProps> = ({
   url,
   title = "Shop Now!",
+  isAvailable,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -64,7 +65,7 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({
             margin-left: 10px;
           `}
         >
-          {title}
+          {isAvailable ? "Shop Now!" : "View on Amazon"}
         </span>
       </Button>
     </A>

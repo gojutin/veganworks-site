@@ -6,7 +6,6 @@ const Button = styled(motion.button).attrs(props => ({
   transition: { duration: 0.3 },
 }))`
   width: 120px;
-  height: 40px;
   font-size: 20px;
   border: none;
   border-radius: 100px;
@@ -16,7 +15,7 @@ const Button = styled(motion.button).attrs(props => ({
   font-weight: bold;
   cursor: pointer;
   margin: 10px;
-  padding: 5px;
+  padding: 10px;
 `;
 
 export default Button;
