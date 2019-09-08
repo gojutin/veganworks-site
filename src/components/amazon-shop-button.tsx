@@ -58,7 +58,7 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({
   return (
     <A href={url} target="_blank" rel="noopener noreferrer">
       <Button whileHover={animateSettings} whileTap={animateSettings}>
-        <Img fixed={imageData} />
+        <Img fixed={imageData} alt="Amazon Logo" />
 
         <span
           css={`

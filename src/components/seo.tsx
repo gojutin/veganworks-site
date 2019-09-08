@@ -20,7 +20,9 @@ const SEO = () => {
   const { title, description, url } = metaData;
   return (
     <Helmet>
+      <html lang="en" />
       <title>{title}</title>
+      <meta charSet="utf-8" />
       <link rel="canonical" href={url} />
       <meta name="description" content={description} />
       <meta name="image" content="veganworks-logo.png" />

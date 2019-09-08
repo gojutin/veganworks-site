@@ -33,7 +33,7 @@ const BackgroundSection = () => (
           <BackgroundImage
             Tag="section"
             fluid={imageData}
-            // backgroundColor={`#040e18`}
+            alt="VeganWorks Products Display"
             style={{
               height: "100%",
               minHeight: "100vh",
@@ -53,6 +53,7 @@ const BackgroundSection = () => (
                 maxWidth: "600px",
               }}
               fluid={logoData}
+              alt="VeganWorks Logo"
             />
 
             <div

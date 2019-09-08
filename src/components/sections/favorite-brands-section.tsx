@@ -50,7 +50,7 @@ const FavoriteBrandsSection: React.FC = () => {
                 text-align: center;
               `}
             >
-              <Img fixed={node.childImageSharp.fixed} />
+              <Img fixed={node.childImageSharp.fixed} alt="Vendor Image" />
             </div>
           );
         })}

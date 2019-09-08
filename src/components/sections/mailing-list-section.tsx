@@ -60,7 +60,12 @@ const MailingListSection = () => {
                     </Feedback>
                   ))}
 
-                <Input type="email" name="email" placeholder="Email Address" />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  aria-label="Email Address"
+                />
                 <Button type="submit" disabled={loading}>
                   Join!
                 </Button>

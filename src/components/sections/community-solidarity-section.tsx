@@ -81,6 +81,7 @@ const BackgroundSection = () => (
           <BackgroundImage
             Tag="section"
             fluid={imageData}
+            alt="Community Solidarity Collage"
             // backgroundColor={`#040e18`}
             style={{
               height: "100vh",
@@ -95,7 +96,7 @@ const BackgroundSection = () => (
           >
             <Box>
               <h4>For every snack box sold, we donate 25 cents to</h4>
-              <Img fluid={csLogo} />
+              <Img fluid={csLogo} alt="Community Solidarity Logo" />
               <p>
                 Learn more at{" "}
                 <a href="https://www.communitysolidarity.org">

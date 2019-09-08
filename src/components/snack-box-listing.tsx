@@ -35,7 +35,7 @@ const Tag = styled.small`
 `;
 
 const Price = styled.div<{ slashed?: boolean }>`
-  color: ${p => (p.slashed ? "#666" : "#04b534")};
+  color: ${p => (p.slashed ? "#666" : "#45a165")};
   text-decoration: ${p => (p.slashed ? "line-through" : "none")};
   font-weight: bold;
   font-size: ${p => (p.slashed ? "12px" : "30px")};
