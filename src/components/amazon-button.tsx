@@ -16,7 +16,7 @@ const Button = styled(motion.button)<{ theme }>`
   margin: 10px auto;
   cursor: pointer;
   box-shadow: none;
-  padding: 4px 18px;
+  padding: 8px 18px;
   outline: none;
   color: #efefef;
 `;

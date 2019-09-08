@@ -7,7 +7,7 @@ import CommunitySolidarityChart from "../community-solidarity-chart";
 
 const Box = styled.div`
   height: 200px;
-  width: 100%;
+  width: 95%;
   max-width: 600px;
   background: rgba(0, 0, 0, 0.7);
   font-family: "Alice";
