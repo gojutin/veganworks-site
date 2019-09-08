@@ -21,6 +21,7 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
       css={`
         background: black;
         padding: 80px 10px;
+        min-height: 400px;
       `}
     >
       {inView && (
