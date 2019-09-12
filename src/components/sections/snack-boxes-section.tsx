@@ -41,8 +41,8 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
     <Section title="Our Snack Boxes">
       <ProductsWrapper>
         {data.allAirtable.edges.map(({ node }) => {
-          const { data } = node;
-          return <SnackBoxListing key={node.data.Name} data={data} />;
+          const { data: nodeData } = node;
+          return <SnackBoxListing key={node.data.Name} data={nodeData} />;
         })}
       </ProductsWrapper>
     </Section>
