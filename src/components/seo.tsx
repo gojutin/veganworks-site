@@ -27,7 +27,10 @@ const SEO = () => {
       <link rel="canonical" href={url} />
       <meta name="description" content={description} />
       <meta name="image" content={mainLogo} />
-
+      <meta
+        name="keywords"
+        content="vegan, snack, boxes, variety, pack, back to school, treats, sweets, chocolate, amazon, veganworks, vegetarian, holidays, christmas, prime, day"
+      />
       <meta property="og:url" content={url} />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={title} />
