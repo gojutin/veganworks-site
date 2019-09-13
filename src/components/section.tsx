@@ -18,8 +18,7 @@ const Section: React.FC<SectionProps> = ({
     <section
       css={`
         background: ${bg};
-        padding: ${noPadding ? "0px" : "40px 10px"};
-        margin: 0px;
+        padding: 40px 10px;
       `}
     >
       <h2
@@ -28,8 +27,6 @@ const Section: React.FC<SectionProps> = ({
           color: ${titleColor};
           text-align: center;
           font-size: 3rem;
-          margin: 0;
-          padding-top: 30px;
         `}
       >
         {title}

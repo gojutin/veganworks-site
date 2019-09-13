@@ -77,12 +77,7 @@ const BackgroundSection = () => (
       }, 0);
 
       return (
-        <section
-          css={`
-            width: 100%;
-            padding: 10px;
-          `}
-        >
+        <section>
           <BackgroundImage
             Tag="section"
             fluid={imageData}

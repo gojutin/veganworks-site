@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Input = styled(motion.input).attrs(() => ({
   initial: { background: "#dadada", scale: 0.9 },
-  animate: { background: "white", scale: 1 },
+  animate: { background: "#fff", scale: 1 },
   transition: { duration: 1 },
 }))`
   width: 100%;

@@ -6,7 +6,7 @@ const StyledFooter = styled.footer`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  background: #111;
+  background: #00cba9;
   color: white;
   text-align: center;
   font-family: Alice;
