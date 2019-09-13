@@ -7,7 +7,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: space-evenly;
   background: #00cba9;
-  color: white;
+  color: #333;
   text-align: center;
   font-family: Alice;
   height: 70px;
