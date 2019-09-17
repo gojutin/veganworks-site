@@ -4,7 +4,6 @@ type SectionProps = {
   title?: string;
   titleColor?: string;
   bg?: string;
-  noPadding?: boolean;
 };
 
 const Section: React.FC<SectionProps> = ({
@@ -12,7 +11,6 @@ const Section: React.FC<SectionProps> = ({
   titleColor = "#333",
   bg = "white",
   children,
-  noPadding,
 }) => {
   return (
     <section
