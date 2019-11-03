@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
 import AmazonStoreButton from "../common/amazon-store-button";
 import { useVeganWorksCoverImage } from "../../queries/useVeganWorksCoverImage";
+import useMedia from "use-media";
 
 const StyledCoverImage = styled(BackgroundImage)`
   align-items: center;
@@ -24,12 +25,12 @@ const StyledLogo = styled(Img)`
 `;
 
 const Tagline = styled.h3`
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   color: white;
   font-family: ${props => props.theme.font.cursive};
   text-align: center;
   @media (max-width: 500px) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 `;
 
@@ -42,8 +43,11 @@ const StyledBackgroundSection = styled.section`
 
 const CoverSection: React.FC = () => {
   const data = useVeganWorksCoverImage();
-  const imageData = data.desktop.childImageSharp.fluid;
-  const logoData = data.icon.childImageSharp.fluid;
+  const isSmall = useMedia({ maxWidth: 500 });
+  const imageData = data.cover.childImageSharp.fluid;
+  const logoData = isSmall
+    ? data.mobileLogo.childImageSharp.fluid
+    : data.desktopLogo.childImageSharp.fluid;
   return (
     <StyledBackgroundSection>
       <StyledCoverImage
