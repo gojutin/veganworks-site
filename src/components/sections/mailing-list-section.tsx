@@ -30,11 +30,7 @@ const MailingListSection = () => {
   };
   return (
     <>
-      <Section
-        title="Join our mailing list"
-        titleColor="#333"
-        bg={"linear-gradient(to bottom,white,#e6f7ff);"}
-      >
+      <Section title="Join our mailing list" titleColor="#333" bg={"#e6f7ff"}>
         <NetlifyForm name="newsletter">
           {/* eslint-disable-next-line */}
           {({ loading, error, success }) => {
@@ -74,7 +70,7 @@ const MailingListSection = () => {
                     aria-label="Email Address"
                   />
                   <Button type="submit" disabled={loading}>
-                    Join!
+                    Submit
                   </Button>
                 </FormWrapper>
               </div>
@@ -82,20 +78,6 @@ const MailingListSection = () => {
           }}
         </NetlifyForm>
       </Section>
-      {/* <div
-        css={`
-          margin-bottom: -5px;
-          background: #e6f7ff;
-        `}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill={theme.colors.lightblue}
-            fillOpacity="1"
-            d="M0,96L60,85.3C120,75,240,53,360,74.7C480,96,600,160,720,170.7C840,181,960,139,1080,133.3C1200,128,1320,160,1380,176L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          />
-        </svg>
-      </div> */}
     </>
   );
 };

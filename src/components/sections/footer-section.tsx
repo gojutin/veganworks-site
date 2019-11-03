@@ -18,7 +18,7 @@ const Wave = styled.svg.attrs(props => ({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 1440 320",
 }))`
-  background: white;
+  background: #e6f7ff;
 
   path {
     fill: ${props => props.theme.colors.purple};

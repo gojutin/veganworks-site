@@ -1,8 +1,8 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import Section from "../section";
+import { useBrandLogos } from "../../queries/useBrandLogos";
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,47 +12,30 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
+const BrandLogo = styled.div`
+  margin: 20px 40px;
+  width: 140px;
+  text-align: center;
+  padding: 10px 30px;
+`;
+
 const FavoriteBrandsSection: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativePath: { regex: "/brands/*/" } }) {
-        edges {
-          node {
-            childImageSharp {
-              fixed(height: 100) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
+  const data = useBrandLogos();
+
+  const renderBrandLogos = data.allFile.edges.map(({ node }, i) => {
+    return (
+      <BrandLogo key={i}>
+        <Img fixed={node.childImageSharp.fixed} alt="Vendor Image" />
+      </BrandLogo>
+    );
+  });
 
   return (
     <Section
       title="Bringing you our favorite brands"
-      bg={`linear-gradient(
-      to bottom,
-      white,
-      #cfdef3);`}
+      bg="linear-gradient(to bottom,white,#cfdef3);"
     >
-      <Wrapper>
-        {data.allFile.edges.map(({ node }, i) => {
-          return (
-            <div
-              key={i}
-              css={`
-                margin: 20px 40px;
-                width: 140px;
-                text-align: center;
-              `}
-            >
-              <Img fixed={node.childImageSharp.fixed} alt="Vendor Image" />
-            </div>
-          );
-        })}
-      </Wrapper>
+      <Wrapper>{renderBrandLogos}</Wrapper>
     </Section>
   );
 };

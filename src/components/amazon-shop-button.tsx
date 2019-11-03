@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import AmazonLogo from "./amazon-icon.svg";
+import AmazonLogo from "../svgs/amazon-icon.svg";
 
-const Button = styled(motion.button)<{ theme }>`
+const Button = styled(motion.button)`
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   min-width: 200px;
-  background: #ff9900;
+  background: ${props => props.theme.colors.purple};
   font-size: 20px;
   margin: 10px auto;
   cursor: pointer;
@@ -38,13 +38,7 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({ url, isAvailable }) => {
     <A href={url} target="_blank" rel="noopener noreferrer">
       <Button whileHover={animateSettings} whileTap={animateSettings}>
         <img height={25} src={AmazonLogo} alt="Amazon Logo" />
-        {/* <Img fixed={imageData} alt="Amazon Logo" /> */}
-
-        <span
-          css={`
-            margin-left: 10px;
-          `}
-        >
+        <span style={{ marginLeft: "10px" }}>
           {isAvailable ? "Shop Now!" : "View on Amazon"}
         </span>
       </Button>

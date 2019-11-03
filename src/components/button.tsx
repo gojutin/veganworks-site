@@ -8,7 +8,7 @@ const Button = styled(motion.button).attrs(() => ({
   width: 120px;
   font-size: 20px;
   border: none;
-  border-radius: 100px;
+  border-radius: 10px;
   outline: none;
   background: #1fd1b3;
   color: #333;

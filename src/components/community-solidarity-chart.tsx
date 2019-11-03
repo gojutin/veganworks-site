@@ -11,6 +11,35 @@ const SectionWrapper = styled.section`
   min-height: 400px;
 `;
 
+const ChartWrapper = styled.div`
+  max-width: 500px;
+  margin: 0 auto;
+`;
+
+const InfoMotionWrapper = styled(motion.div)`
+  color: ${props => props.theme.colors.lightblue};
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+  font-family: Alice;
+
+  h3 {
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+  }
+
+  span.lbs {
+    font-size: 60px;
+  }
+  p {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+  }
+`;
+
 type CommunitySolidarityChartProps = {
   lbs: number;
 };
@@ -22,67 +51,41 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
     threshold: 0,
   });
 
+  if (!inView) {
+    return <SectionWrapper ref={ref} />;
+  }
+
   return (
     <SectionWrapper ref={ref}>
-      {inView && (
-        <div
-          css={`
-            max-width: 500px;
-            margin: 0 auto;
-          `}
+      <ChartWrapper>
+        <GaugeChart
+          id="pounds"
+          nrOfLevels={20}
+          percent={0.76}
+          hideText={true}
+          colors={["red", "limegreen"]}
+          needleColor="#dadada"
+          needleBaseColor="#333"
+          arcWidth={0.2}
+        />
+        <InfoMotionWrapper
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5 }}
         >
-          <GaugeChart
-            id="pounds"
-            nrOfLevels={20}
-            percent={0.76}
-            hideText
-            colors={["red", "limegreen"]}
-            needleColor="#dadada"
-            needleBaseColor="#333"
-            arcWidth={0.2}
-          />
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.5 }}
-            css={`
-              color: ${props => props.theme.colors.lightblue};
-              text-align: center;
-
-              margin: 0;
-              padding: 0;
-              font-family: Alice;
-
-              h3 {
-                font-size: 50px;
-                padding: 0;
-                margin: 0;
-              }
-
-              span.lbs {
-                font-size: 60px;
-              }
-              p {
-                font-size: 20px;
-                padding: 0;
-                margin: 0;
-              }
-            `}
-          >
-            <h3>
-              <span className="lbs">
-                <CountUp end={lbs} />
-              </span>{" "}
-              POUNDS
-            </h3>
-            <p>of fresh groceries and counting!</p>
-            <p style={{ color: "white", padding: "20px", fontSize: "16px" }}>
-              For every dollar donated, Community Solidarity is able to provide
-              8 pounds of fresh groceries to a family in need.
-            </p>
-          </motion.div>
-        </div>
-      )}
+          <h3>
+            <span className="lbs">
+              <CountUp end={lbs} />
+            </span>{" "}
+            POUNDS
+          </h3>
+          <p>of fresh groceries and counting!</p>
+          <p style={{ color: "white", padding: "20px", fontSize: "16px" }}>
+            For every dollar donated, Community Solidarity is able to provide 8
+            pounds of fresh groceries to a family in need.
+          </p>
+        </InfoMotionWrapper>
+      </ChartWrapper>
     </SectionWrapper>
   );
 };

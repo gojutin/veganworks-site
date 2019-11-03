@@ -33,11 +33,16 @@ const PriceWrapper = styled.article`
 `;
 
 const Price = styled.div<{ slashed?: boolean }>`
-  color: ${p => (p.slashed ? "#666" : "#000")};
+  color: ${p => (p.slashed ? "#666" : "inherit")};
   text-decoration: ${p => (p.slashed ? "line-through" : "none")};
   font-weight: bold;
   font-size: ${p => (p.slashed ? "12px" : "22px")};
   margin-right: ${p => (p.slashed ? "10px" : "0px")};
+  font-family: Alice;
+`;
+
+const Availability = styled.small`
+  font-family: Alice;
 `;
 
 type SnackBoxListingProps = {
@@ -62,7 +67,7 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
       <Title>{data.Name}</Title>
       {renderPrice}
 
-      <small>{data.Availability}</small>
+      <Availability>{data.Availability}</Availability>
       <AmazonShopButton url={data.Link} isAvailable={isHolidaySeason} />
     </Wrapper>
   );
