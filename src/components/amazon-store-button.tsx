@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "gatsby-image";
 import { motion } from "framer-motion";
 import AmazonLogo from "../svgs/amazon-icon.svg";
 

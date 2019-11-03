@@ -9,7 +9,7 @@ const Wrapper = styled.article`
 `;
 
 const Image = styled.img`
-  width: 500px;
+  width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,7 @@ const Image = styled.img`
 const Title = styled.h2`
   font-family: Alice;
   margin: 8px 0px;
+  font-size: 30px;
 `;
 
 const PriceWrapper = styled.article`
@@ -36,7 +37,7 @@ const Price = styled.div<{ slashed?: boolean }>`
   color: ${p => (p.slashed ? "#666" : "inherit")};
   text-decoration: ${p => (p.slashed ? "line-through" : "none")};
   font-weight: bold;
-  font-size: ${p => (p.slashed ? "12px" : "22px")};
+  font-size: ${p => (p.slashed ? "16px" : "24px")};
   margin-right: ${p => (p.slashed ? "10px" : "0px")};
   font-family: Alice;
 `;
@@ -46,6 +47,8 @@ const Availability = styled.small`
 `;
 
 type SnackBoxListingProps = {
+  // TODO: Type this out!
+  // eslint-disable-next-line
   data: any;
 };
 
@@ -67,8 +70,8 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
       <Title>{data.Name}</Title>
       {renderPrice}
 
-      <Availability>{data.Availability}</Availability>
       <AmazonShopButton url={data.Link} isAvailable={isHolidaySeason} />
+      <Availability>{data.Availability}</Availability>
     </Wrapper>
   );
 };

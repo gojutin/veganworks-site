@@ -4,7 +4,6 @@ import Section from "../section";
 import Input from "../input";
 import Button from "../button";
 import NetlifyForm from "react-netlify-form";
-import { useTheme } from "../../styles";
 
 const FormWrapper = styled.div`
   display: flex;
@@ -20,8 +19,6 @@ const Feedback = styled.p<{ color?: string }>`
 `;
 
 const MailingListSection = () => {
-  const theme = useTheme();
-
   const clearFields = () => {
     const allInputs = document.querySelectorAll("input, textarea");
     allInputs.forEach((el: HTMLInputElement | HTMLTextAreaElement) => {
