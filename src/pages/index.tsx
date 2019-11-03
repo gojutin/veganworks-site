@@ -1,22 +1,24 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import TitleSection from "../components/sections/title-section";
-import SnackBoxesSection from "../components/sections/snack-boxes-section";
-import MailingListSection from "../components/sections/mailing-list-section";
-import FavoriteBrandsSection from "../components/sections/favorite-brands-section";
-import CommunitySolidaritySection from "../components/sections/community-solidarity-section";
-import Footer from "../components/footer";
+import {
+  CoverSection,
+  ProductsSection,
+  MailingListSection,
+  FavoriteBrandsSection,
+  CommunitySolidaritySection,
+  FooterSection,
+} from "../components/sections";
 
 const App = () => (
   <Layout>
     <SEO />
-    <TitleSection />
-    <SnackBoxesSection />
+    <CoverSection />
+    <ProductsSection />
     <FavoriteBrandsSection />
     <CommunitySolidaritySection />
     <MailingListSection />
-    <Footer />
+    <FooterSection />
   </Layout>
 );
 

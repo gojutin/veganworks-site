@@ -57,4 +57,4 @@ const FavoriteBrandsSection: React.FC = () => {
   );
 };
 
-export default FavoriteBrandsSection;
+export { FavoriteBrandsSection };

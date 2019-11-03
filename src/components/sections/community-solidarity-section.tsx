@@ -21,7 +21,7 @@ const Box = styled.div`
   }
   a {
     text-decoration: none;
-    color: lightskyblue;
+    color: ${props => props.theme.colors.lightblue};
 
     :hover {
       text-decoration: underline;
@@ -112,7 +112,7 @@ const BackgroundSection = () => (
   />
 );
 
-const StyledBackgroundSection = styled(BackgroundSection)`
+const CommunitySolidaritySection = styled(BackgroundSection)`
   width: 100%;
   background-position: bottom center;
   background-repeat: repeat-y;
@@ -120,4 +120,4 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   margin: 0px;
 `;
 
-export default StyledBackgroundSection;
+export { CommunitySolidaritySection };

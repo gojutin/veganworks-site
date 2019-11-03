@@ -37,16 +37,14 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
     }
   `);
 
+  const renderSnackBoxListings = data.allAirtable.edges.map(({ node }) => {
+    return <SnackBoxListing key={node.data.Name} data={node.data} />;
+  });
   return (
     <Section title="Our Snack Boxes">
-      <ProductsWrapper>
-        {data.allAirtable.edges.map(({ node }) => {
-          const { data: nodeData } = node;
-          return <SnackBoxListing key={node.data.Name} data={nodeData} />;
-        })}
-      </ProductsWrapper>
+      <ProductsWrapper>{renderSnackBoxListings}</ProductsWrapper>
     </Section>
   );
 };
 
-export default ProductsSection;
+export { ProductsSection };

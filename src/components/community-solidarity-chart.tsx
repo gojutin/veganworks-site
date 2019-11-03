@@ -1,8 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 import GaugeChart from "react-gauge-chart";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+
+const SectionWrapper = styled.section`
+  background: black;
+  padding: 80px 10px;
+  min-height: 400px;
+`;
 
 type CommunitySolidarityChartProps = {
   lbs: number;
@@ -16,14 +23,7 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
   });
 
   return (
-    <section
-      ref={ref}
-      css={`
-        background: black;
-        padding: 80px 10px;
-        min-height: 400px;
-      `}
-    >
+    <SectionWrapper ref={ref}>
       {inView && (
         <div
           css={`
@@ -46,7 +46,7 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
             animate={{ scale: 1 }}
             transition={{ duration: 1.5 }}
             css={`
-              color: lightskyblue;
+              color: ${props => props.theme.colors.lightblue};
               text-align: center;
 
               margin: 0;
@@ -83,7 +83,7 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
           </motion.div>
         </div>
       )}
-    </section>
+    </SectionWrapper>
   );
 };
 

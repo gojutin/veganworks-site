@@ -11,7 +11,7 @@ const Input = styled(motion.input).attrs(() => ({
   font-size: 20px;
   padding: 10px 20px;
   border: 2px solid #333;
-  border-radius: 100px;
+  border-radius: 10px;
   outline: none;
   color: #333;
   ::placeholder {
