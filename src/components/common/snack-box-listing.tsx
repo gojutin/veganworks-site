@@ -23,17 +23,20 @@ const Image = styled.img`
 const Title = styled.h2`
   font-family: Alice;
   margin: 8px 0px;
-  font-size: 26px;
+  font-size: 2rem;
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 `;
 
-const PriceWrapper = styled.article`
+const PriceWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 `;
 
-const Price = styled.div<{ slashed?: boolean }>`
+const Price = styled.p<{ slashed?: boolean }>`
   color: ${p => (p.slashed ? "#666" : "inherit")};
   text-decoration: ${p => (p.slashed ? "line-through" : "none")};
   font-weight: bold;
