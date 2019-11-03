@@ -48,7 +48,7 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({ url }) => {
   const imageData = data.file.childImageSharp.fixed;
   const animateSettings = {
     boxShadow: "0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.1)",
-    scale: 1.02,
+    scale: 1.03,
   };
   return (
     <A href={url} target="_blank" rel="noopener noreferrer">

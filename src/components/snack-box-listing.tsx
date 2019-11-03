@@ -25,11 +25,18 @@ const Title = styled.h2`
   margin: 8px 0px;
 `;
 
+const PriceWrapper = styled.article`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Price = styled.div<{ slashed?: boolean }>`
-  color: ${p => (p.slashed ? "#666" : "#45a165")};
+  color: ${p => (p.slashed ? "#666" : "#000")};
   text-decoration: ${p => (p.slashed ? "line-through" : "none")};
   font-weight: bold;
-  font-size: ${p => (p.slashed ? "12px" : "30px")};
+  font-size: ${p => (p.slashed ? "12px" : "22px")};
   margin-right: ${p => (p.slashed ? "10px" : "0px")};
 `;
 
@@ -40,26 +47,20 @@ type SnackBoxListingProps = {
 const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
   const month = new Date().getMonth();
   const isHolidaySeason = [1, 2, 3, 4, 10, 11, 12].includes(month);
+  const renderPrice = data.Sale_Price ? (
+    <PriceWrapper>
+      <Price slashed={true}>${data.Price}</Price>
+
+      <Price>${data.Sale_Price}</Price>
+    </PriceWrapper>
+  ) : (
+    <Price>${data.Price}</Price>
+  );
   return (
     <Wrapper>
       <Image src={data.Image[0].url} alt={data.Name} />
       <Title>{data.Name}</Title>
-      {data.Sale_Price ? (
-        <article
-          css={`
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-          `}
-        >
-          <Price slashed>${data.Price}</Price>
-
-          <Price>${data.Sale_Price}</Price>
-        </article>
-      ) : (
-        <Price>${data.Price}</Price>
-      )}
+      {renderPrice}
 
       <small>{data.Availability}</small>
       <AmazonShopButton url={data.Link} isAvailable={isHolidaySeason} />

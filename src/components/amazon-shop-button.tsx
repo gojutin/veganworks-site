@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
 import { motion } from "framer-motion";
+import AmazonLogo from "./amazon-icon.svg";
 
 const Button = styled(motion.button)<{ theme }>`
   display: flex;
@@ -10,15 +9,15 @@ const Button = styled(motion.button)<{ theme }>`
   justify-content: center;
   border-radius: 10px;
   min-width: 200px;
-  background: rgba(71, 138, 240, 0.1);
-  border: 2px solid #333;
+  background: #ff9900;
   font-size: 20px;
   margin: 10px auto;
   cursor: pointer;
   box-shadow: none;
-  padding: 5px 18px;
+  padding: 10px 18px;
   outline: none;
-  color: #333;
+  color: white;
+  font-weight: 600;
 `;
 
 const A = styled.a`
@@ -31,22 +30,6 @@ type AmazonButtonProps = {
 };
 
 const AmazonButton: React.FC<AmazonButtonProps> = ({ url, isAvailable }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "amazon-logo-black.png" }) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 25, height: 25) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `);
-
-  const imageData = data.file.childImageSharp.fixed;
-
   const animateSettings = {
     boxShadow: "0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.1)",
     scale: 1.02,
@@ -54,7 +37,8 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({ url, isAvailable }) => {
   return (
     <A href={url} target="_blank" rel="noopener noreferrer">
       <Button whileHover={animateSettings} whileTap={animateSettings}>
-        <Img fixed={imageData} alt="Amazon Logo" />
+        <img height={25} src={AmazonLogo} alt="Amazon Logo" />
+        {/* <Img fixed={imageData} alt="Amazon Logo" /> */}
 
         <span
           css={`
