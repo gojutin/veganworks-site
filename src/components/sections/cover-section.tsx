@@ -53,7 +53,7 @@ const CoverSection: React.FC = () => {
       >
         <StyledLogo fluid={logoData} alt="VeganWorks Logo" />
         <Tagline>Delicious Vegan Snack Boxes</Tagline>
-        <div style={{ marginTop: "50px" }}>
+        <div style={{ marginTop: "50px", width: "90%" }}>
           <AmazonStoreButton
             title="Visit our Amazon Store"
             url="https://www.amazon.com/stores/VeganWorks/VeganWorks/page/E2CD3E05-F08E-470F-BD10-F668DA807157"

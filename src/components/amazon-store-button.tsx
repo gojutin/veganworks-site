@@ -8,7 +8,9 @@ const Button = styled(motion.button)`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  min-width: 180px;
+  width: 100%;
+  max-width: 280px;
+  font-weight: 600;
   background: rgba(71, 138, 245, 0.3);
   border: 2px solid #efefef;
   font-size: 18px;
@@ -37,7 +39,7 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({ url }) => {
   return (
     <A href={url} target="_blank" rel="noopener noreferrer">
       <Button whileHover={animateSettings} whileTap={animateSettings}>
-        <img src={AmazonLogo} height="25px" alt="Amazon Logo" />
+        <img src={AmazonLogo} height="30px" alt="Amazon Logo" />
 
         <span style={{ margin: "5px 0px 5px 10px" }}>
           View our Amazon store

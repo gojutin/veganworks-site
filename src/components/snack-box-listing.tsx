@@ -23,7 +23,7 @@ const Image = styled.img`
 const Title = styled.h2`
   font-family: Alice;
   margin: 8px 0px;
-  font-size: 30px;
+  font-size: 26px;
 `;
 
 const PriceWrapper = styled.article`
