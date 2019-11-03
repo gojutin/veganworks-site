@@ -1,22 +1,22 @@
 import React from "react";
 import Img from "gatsby-image";
 import styled from "styled-components";
-import Section from "../section";
+import Section from "../common/section";
 import { useBrandLogos } from "../../queries/useBrandLogos";
 
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 960px;
+  max-width: 700px;
   margin: 0 auto;
 `;
 
-const BrandLogo = styled.div`
+const BrandLogo = styled(Img)`
   margin: 20px 40px;
   width: 140px;
   text-align: center;
-  padding: 10px 30px;
+  padding: 10px 20px;
 `;
 
 const FavoriteBrandsSection: React.FC = () => {
@@ -24,9 +24,11 @@ const FavoriteBrandsSection: React.FC = () => {
 
   const renderBrandLogos = data.allFile.edges.map(({ node }, i) => {
     return (
-      <BrandLogo key={i}>
-        <Img fixed={node.childImageSharp.fixed} alt="Vendor Image" />
-      </BrandLogo>
+      <BrandLogo
+        key={i}
+        fixed={node.childImageSharp.fixed}
+        alt="Vendor Image"
+      />
     );
   });
 

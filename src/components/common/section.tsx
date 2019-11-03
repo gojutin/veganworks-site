@@ -11,6 +11,7 @@ const SectionTitle = styled.h3<{ color: string }>`
   color: ${props => props.color};
   text-align: center;
   font-size: 3rem;
+  margin: 3rem 0rem;
 `;
 
 type SectionProps = {

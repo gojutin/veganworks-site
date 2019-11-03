@@ -7,7 +7,7 @@ const Input = styled(motion.input).attrs(() => ({
   transition: { duration: 1 },
 }))`
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   font-size: 20px;
   padding: 10px 20px;
   border: 2px solid #333;

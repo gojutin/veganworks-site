@@ -1,8 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import SnackBoxListing from "../snack-box-listing";
-import Section from "../section";
+import SnackBoxListing from "../common/snack-box-listing";
+import Section from "../common/section";
 
 const ProductsWrapper = styled.section`
   display: flex;

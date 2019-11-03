@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { GlobalStyles, theme } from "../styles";
+import { GlobalStyles, theme } from "../../styles";
 
 const Main = styled.div`
   margin: 0px;

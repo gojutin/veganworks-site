@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
-import AmazonStoreButton from "../amazon-store-button";
+import AmazonStoreButton from "../common/amazon-store-button";
 import { useVeganWorksCoverImage } from "../../queries/useVeganWorksCoverImage";
 
 const StyledCoverImage = styled(BackgroundImage)`
@@ -20,16 +20,16 @@ const StyledCoverImage = styled(BackgroundImage)`
 
 const StyledLogo = styled(Img)`
   max-width: 800px;
-  width: 90%;
+  width: 95%;
 `;
 
 const Tagline = styled.h3`
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: white;
   font-family: ${props => props.theme.font.cursive};
   text-align: center;
   @media (max-width: 500px) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 `;
 

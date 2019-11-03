@@ -1,25 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import AmazonLogo from "../svgs/amazon-icon.svg";
+import AmazonLogo from "../../svgs/amazon-icon.svg";
+import PurpleButton from "./purple-button";
 
-const Button = styled(motion.button)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 280px;
-  font-weight: 600;
+const Button = styled(PurpleButton)`
   background: rgba(71, 138, 245, 0.3);
-  border: 2px solid #efefef;
-  font-size: 18px;
-  margin: 10px auto;
-  cursor: pointer;
-  box-shadow: none;
-  padding: 8px 18px;
-  outline: none;
-  color: #efefef;
 `;
 
 const A = styled.a`

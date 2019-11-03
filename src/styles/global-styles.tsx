@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import cssreset from "modern-css-reset";
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -9,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
     color: #333;
     background: #111;
   }
+  ${cssreset};
 `;
 
 export { GlobalStyles };

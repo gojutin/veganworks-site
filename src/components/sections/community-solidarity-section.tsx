@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
-import CommunitySolidarityChart from "../community-solidarity-chart";
+import CommunitySolidarityChart from "../common/community-solidarity-chart";
 import { useCommunitySolidarityData } from "../../queries/useCommunitySolidarityData";
 
 const CoverImage = styled(BackgroundImage)`
@@ -17,8 +17,8 @@ const CoverImage = styled(BackgroundImage)`
 `;
 
 const InfoBox = styled.div`
-  height: 200px;
-  width: 95%;
+  min-height: 200px;
+  width: 90%;
   max-width: 600px;
   background: rgba(0, 0, 0, 0.7);
   font-family: "Alice";

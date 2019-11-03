@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Section from "../section";
-import Input from "../input";
-import Button from "../button";
+import Section from "../common/section";
+import Input from "../common/input";
+import PurpleButton from "../common/purple-button";
 import NetlifyForm from "react-netlify-form";
 
 const FormWrapper = styled.div`
@@ -16,6 +16,7 @@ const Feedback = styled.p<{ color?: string }>`
   color: #333;
   font-family: Alice;
   font-size: 20px;
+  padding: 15px;
 `;
 
 const MailingListSection = () => {
@@ -66,9 +67,9 @@ const MailingListSection = () => {
                     placeholder="Email Address"
                     aria-label="Email Address"
                   />
-                  <Button type="submit" disabled={loading}>
+                  <PurpleButton type="submit" disabled={loading}>
                     Submit
-                  </Button>
+                  </PurpleButton>
                 </FormWrapper>
               </div>
             );

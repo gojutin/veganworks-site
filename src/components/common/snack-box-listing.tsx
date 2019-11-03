@@ -58,7 +58,6 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
   const renderPrice = data.Sale_Price ? (
     <PriceWrapper>
       <Price slashed={true}>${data.Price}</Price>
-
       <Price>${data.Sale_Price}</Price>
     </PriceWrapper>
   ) : (
@@ -69,7 +68,6 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
       <Image src={data.Image[0].url} alt={data.Name} />
       <Title>{data.Name}</Title>
       {renderPrice}
-
       <AmazonShopButton url={data.Link} isAvailable={isHolidaySeason} />
       <Availability>{data.Availability}</Availability>
     </Wrapper>
