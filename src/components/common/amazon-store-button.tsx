@@ -6,6 +6,7 @@ import PurpleButton from "./purple-button";
 
 const Button = styled(PurpleButton)`
   background: rgba(71, 138, 245, 0.3);
+  border: 2px solid white;
 `;
 
 const A = styled.a`

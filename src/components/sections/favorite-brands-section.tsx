@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 1080px;
+  margin: 0px auto 60px auto;
 `;
 
 const BrandLogo = styled(Img)`
@@ -35,7 +35,7 @@ const FavoriteBrandsSection: React.FC = () => {
   return (
     <Section
       title="Bringing you our favorite brands"
-      bg="linear-gradient(to bottom,white,#cfdef3);"
+      bg="linear-gradient(to bottom,white,#e3ecf8);"
     >
       <Wrapper>{renderBrandLogos}</Wrapper>
     </Section>

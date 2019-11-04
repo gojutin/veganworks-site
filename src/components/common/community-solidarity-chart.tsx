@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
 const SectionWrapper = styled.section`
-  background: black;
+  background: #091424;
   padding: 80px 10px;
   min-height: 400px;
 `;

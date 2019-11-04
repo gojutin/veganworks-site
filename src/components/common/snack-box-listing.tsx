@@ -9,7 +9,7 @@ const Wrapper = styled.article`
 `;
 
 const Image = styled.img`
-  width: 700px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +41,8 @@ const Price = styled.p<{ slashed?: boolean }>`
   text-decoration: ${p => (p.slashed ? "line-through" : "none")};
   font-weight: bold;
   font-size: ${p => (p.slashed ? "16px" : "24px")};
+  margin: 0px;
+  padding: 0px;
   margin-right: ${p => (p.slashed ? "10px" : "0px")};
   font-family: Alice;
 `;

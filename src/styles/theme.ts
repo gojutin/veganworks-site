@@ -13,6 +13,7 @@ const theme = {
   },
   colors: {
     purple: "#C711FC",
+    lightpurple: "#EDB7FE",
     lightblue: "#95D4FB",
   },
 };

@@ -20,7 +20,7 @@ const InfoBox = styled.div`
   min-height: 200px;
   width: 90%;
   max-width: 600px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   font-family: "Alice";
   padding: 20px 10px;
   text-align: center;

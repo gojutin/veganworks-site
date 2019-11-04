@@ -37,11 +37,10 @@ const config = {
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-typescript`,
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        google: {
-          families: ["Alice", "Open Sans", "Satisfy"],
-        },
+        fonts: ["Alice", "Open Sans", "Satisfy"],
+        display: "fallback",
       },
     },
     {
