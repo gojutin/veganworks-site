@@ -28,7 +28,7 @@ const MailingListSection = () => {
   };
   return (
     <>
-      <Section title="Join our mailing list" titleColor="#333" bg={"#e6f7ff"}>
+      <Section title="Join our mailing list" titleColor="#333" bg={"white"}>
         <NetlifyForm name="newsletter">
           {/* eslint-disable-next-line */}
           {({ loading, error, success }) => {
