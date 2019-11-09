@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const PurpleButton = styled(motion.button).attrs(() => ({
-  whileHover: { scale: 1.05 },
-  transition: { duration: 0.3 },
+  whileHover: { scale: 1.02 },
+  transition: { duration: 0.2 },
 }))`
   display: flex;
   align-items: center;

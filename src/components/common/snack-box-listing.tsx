@@ -9,7 +9,7 @@ const Wrapper = styled.article`
 `;
 
 const Image = styled.img`
-  width: 600px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;

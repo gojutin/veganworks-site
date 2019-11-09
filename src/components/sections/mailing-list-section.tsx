@@ -46,13 +46,11 @@ const MailingListSection = () => {
               </Feedback>
             );
 
-            const maybeRenderFeedback =
-              !success &&
-              (!error && (
-                <Feedback>
-                  Stay up to date about our latest products and promotions.
-                </Feedback>
-              ));
+            const maybeRenderFeedback = !success && !error && (
+              <Feedback>
+                Stay up to date about our latest products and promotions.
+              </Feedback>
+            );
 
             return (
               <div style={{ textAlign: "center" }}>
