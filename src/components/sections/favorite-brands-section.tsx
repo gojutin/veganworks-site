@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import Section from "../common/section";
+import { BackgroundSlider } from "../common/background-slider";
 import { useBrandLogos } from "../../queries/useBrandLogos";
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1080px;
-  margin: 0px auto 60px auto;
+  white-space: nowrap;
+  overflow: hidden;
+
+  div {
+    display: inline-block;
+    padding: 0 2.2rem;
+    vertical-align: middle;
+    opacity: 0.8;
+    outline: none;
+    cursor: default;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    filter: grayscale(100%);
+    :hover {
+      opacity: 1;
+      transform: scale(1.2);
+      filter: grayscale(0%);
+    }
+  }
 `;
 
 const BrandLogo = styled(Img)`
@@ -21,23 +36,34 @@ const BrandLogo = styled(Img)`
 
 const FavoriteBrandsSection: React.FC = () => {
   const data = useBrandLogos();
+  const [isPaused, setIsPaused] = useState(false);
+  const handleMouseEnter = () => {
+    setIsPaused(false);
+  };
 
-  const renderBrandLogos = data.allFile.edges.map(({ node }, i) => {
-    return (
-      <BrandLogo
-        key={i}
-        fixed={node.childImageSharp.fixed}
-        alt="Vendor Image"
-      />
-    );
-  });
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  };
+
+  const renderBrandLogos = [...data.allFile.edges, ...data.allFile.edges].map(
+    ({ node }, i) => {
+      return (
+        <span
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          key={i}
+        >
+          <BrandLogo fixed={node.childImageSharp.fixed} alt="Vendor Image" />
+        </span>
+      );
+    }
+  );
 
   return (
-    <Section
-      title="Bringing you our favorite brands"
-      bg="linear-gradient(to bottom,white,#e3ecf8);"
-    >
-      <Wrapper>{renderBrandLogos}</Wrapper>
+    <Section bg="white" title="Bringing You Our Favorite Brands">
+      <BackgroundSlider duration={40} paused={isPaused}>
+        <Wrapper>{renderBrandLogos}</Wrapper>
+      </BackgroundSlider>
     </Section>
   );
 };
