@@ -1,15 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const useVeganWorksCoverImage = () => {
+const useVeganWorksLogo = () => {
   const data = useStaticQuery(graphql`
     query {
-      cover: file(relativePath: { eq: "veganworks-cover2.png" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
       mobileLogo: file(
         relativePath: { eq: "veganworks-logo-small-screen.png" }
       ) {
@@ -31,4 +24,4 @@ const useVeganWorksCoverImage = () => {
   return data;
 };
 
-export { useVeganWorksCoverImage };
+export { useVeganWorksLogo };

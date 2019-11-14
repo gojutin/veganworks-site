@@ -4,10 +4,12 @@ import styled from "styled-components";
 import Section from "../common/section";
 import { BackgroundSlider } from "../common/background-slider";
 import { useBrandLogos } from "../../queries/useBrandLogos";
+import { motion } from "framer-motion";
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   white-space: nowrap;
   overflow: hidden;
+  min-height: 200px;
 
   div {
     display: inline-block;
@@ -16,19 +18,19 @@ const Wrapper = styled.div`
     opacity: 0.8;
     outline: none;
     cursor: default;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
     overflow: hidden;
     filter: grayscale(100%);
     :hover {
       opacity: 1;
-      transform: scale(1.2);
+      transform: scale(1.1);
       filter: grayscale(0%);
     }
   }
 `;
 
 const BrandLogo = styled(Img)`
-  margin: 20px 40px;
+  margin: 20px 30px;
   width: 140px;
   text-align: center;
   padding: 10px 20px;
@@ -38,7 +40,7 @@ const FavoriteBrandsSection: React.FC = () => {
   const data = useBrandLogos();
   const [isPaused, setIsPaused] = useState(false);
   const handleMouseEnter = () => {
-    setIsPaused(false);
+    setIsPaused(true);
   };
 
   const handleMouseLeave = () => {
@@ -60,7 +62,10 @@ const FavoriteBrandsSection: React.FC = () => {
   );
 
   return (
-    <Section bg="white" title="Bringing You Our Favorite Brands">
+    <Section
+      bg="linear-gradient(white, #dadada)"
+      title="Bringing You Our Favorite Brands"
+    >
       <BackgroundSlider duration={40} paused={isPaused}>
         <Wrapper>{renderBrandLogos}</Wrapper>
       </BackgroundSlider>

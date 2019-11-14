@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 const StyledFooter = styled.footer`
   margin-top: -20px;
@@ -36,6 +37,7 @@ const FooterSection = () => {
       </Wave>
       <StyledFooter>
         <span>info@veganworks.com</span>
+        {/* <Link to="/vendors">Vendors</Link> */}
         <span>&reg; 2019 VeganWorks, Inc.</span>
       </StyledFooter>
     </>

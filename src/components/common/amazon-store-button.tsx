@@ -28,7 +28,7 @@ const AmazonButton: React.FC<AmazonButtonProps> = ({ url }) => {
         <img src={AmazonLogo} height="30px" alt="Amazon Logo" />
 
         <span style={{ margin: "5px 0px 5px 10px" }}>
-          View our Amazon store
+          Visit our Amazon store
         </span>
       </Button>
     </A>

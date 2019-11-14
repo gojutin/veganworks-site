@@ -41,7 +41,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
     return <SnackBoxListing key={node.data.Name} data={node.data} />;
   });
   return (
-    <Section title="Our Snack Boxes">
+    <Section bg="linear-gradient(white, #C1F9FE)" title="Our Snack Boxes">
       <ProductsWrapper>{renderSnackBoxListings}</ProductsWrapper>
     </Section>
   );

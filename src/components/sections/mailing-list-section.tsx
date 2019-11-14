@@ -37,7 +37,9 @@ const MailingListSection = () => {
             }
 
             const maybeRenderSuccess = success && (
-              <Feedback color="#05e642">You have been signed up!</Feedback>
+              <Feedback color="#05e642">
+                Got it. Thanks for subscribing!
+              </Feedback>
             );
 
             const maybeRenderError = error && (
@@ -64,6 +66,7 @@ const MailingListSection = () => {
                     name="email"
                     placeholder="Email Address"
                     aria-label="Email Address"
+                    required={true}
                   />
                   <PurpleButton type="submit" disabled={loading}>
                     Submit

@@ -7,8 +7,8 @@ const useBrandLogos = () => {
         edges {
           node {
             childImageSharp {
-              fixed(height: 120) {
-                ...GatsbyImageSharpFixed
+              fixed(height: 100) {
+                ...GatsbyImageSharpFixed_noBase64
               }
             }
           }
