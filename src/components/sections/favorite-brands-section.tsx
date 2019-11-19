@@ -63,7 +63,7 @@ const FavoriteBrandsSection: React.FC = () => {
 
   return (
     <Section
-      bg="linear-gradient(white, #f9fec1)"
+      bg="linear-gradient(#f3feff, #f9fec1)"
       title="Bringing You Our Favorite Brands"
     >
       <BackgroundSlider duration={40} paused={isPaused}>
