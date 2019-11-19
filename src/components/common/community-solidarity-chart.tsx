@@ -17,7 +17,7 @@ const ChartWrapper = styled.div`
 `;
 
 const InfoMotionWrapper = styled(motion.div)`
-  color: ${props => props.theme.colors.lightblue};
+  color: #f9e6ff;
   text-align: center;
 
   margin: 0;
