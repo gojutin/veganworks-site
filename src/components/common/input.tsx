@@ -6,10 +6,10 @@ const Input = styled(motion.input).attrs(() => ({
   animate: { background: "#fff", scale: 1 },
   transition: { duration: 1 },
 }))`
-  width: 100%;
+  width: 90%;
   max-width: 400px;
   font-size: 20px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border: 2px solid #333;
   border-radius: 10px;
   outline: none;
