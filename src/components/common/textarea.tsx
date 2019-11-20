@@ -1,19 +1,19 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const Input = styled(motion.input).attrs(() => ({
+const TextArea = styled(motion.textarea).attrs(() => ({
   initial: { background: "#dadada" },
   animate: { background: "#fff" },
   transition: { duration: 1 },
+  rows: 8,
 }))`
   width: 90%;
-  min-width: 300px;
+  margin: 10px;
   max-width: 600px;
   font-size: 18px;
-  margin: 10px;
   padding: 8px 20px;
   border: 1px solid #333;
-  border-radius: 8px;
+  border-radius: 10px;
   outline: none;
   color: #333;
   ::placeholder {
@@ -21,4 +21,4 @@ const Input = styled(motion.input).attrs(() => ({
   }
 `;
 
-export { Input };
+export { TextArea };

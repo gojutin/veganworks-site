@@ -1,27 +1,26 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const PurpleButton = styled(motion.button).attrs(() => ({
+const Button = styled(motion.button).attrs(() => ({
   whileHover: { scale: 1.02 },
   transition: { duration: 0.2 },
 }))`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  min-width: 300px;
-  background: ${props => props.theme.colors.purple};
+  border-radius: 8px;
+  min-width: 150px;
+  background: ${props => props.theme.colors.primary5};
   font-size: 20px;
-  margin: 10px auto;
+  margin: 10px;
   cursor: pointer;
+  border: none;
   box-shadow: none;
-  padding: 10px 18px;
+  padding: 8px 18px;
   outline: none;
   color: white;
   font-weight: 600;
-  @media (max-width: 500px) {
-    width: 90%;
-  }
+  width: ${props => (props.theme.screens.sm ? "90%" : "auto")};
 `;
 
-export default PurpleButton;
+export { Button };

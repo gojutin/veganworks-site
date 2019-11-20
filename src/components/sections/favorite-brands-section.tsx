@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Img from "gatsby-image";
 import styled from "styled-components";
-import Section from "../common/section";
-import { BackgroundSlider } from "../common/background-slider";
 import { useBrandLogos } from "../../queries/useBrandLogos";
 import { motion } from "framer-motion";
+
+// Components
+import { Section } from "../common/section";
+import { BackgroundSlider } from "../common/background-slider";
 
 const Wrapper = styled(motion.div)`
   white-space: nowrap;
@@ -63,7 +65,7 @@ const FavoriteBrandsSection: React.FC = () => {
 
   return (
     <Section
-      bg="linear-gradient(#f3feff, #fff)"
+      bg="linear-gradient(#fff, #fff)"
       title="Bringing You Our Favorite Brands"
     >
       <BackgroundSlider duration={40} paused={isPaused}>

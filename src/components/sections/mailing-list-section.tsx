@@ -1,83 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Section from "../common/section";
-import Input from "../common/input";
-import PurpleButton from "../common/purple-button";
-import NetlifyForm from "react-netlify-form";
+import addToMailchimp from "gatsby-plugin-mailchimp";
+
+// Components
+import { Section } from "../common/section";
+import { Input } from "../common/input";
+import { Button } from "../common/button";
+import { FormFeedbackBox } from "../common/form-feedback-box";
 
 const FormWrapper = styled.div`
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 `;
 
-const Feedback = styled.p<{ color?: string }>`
-  color: #333;
-  font-family: Alice;
-  font-size: 20px;
-  padding: 15px;
+const Form = styled.form`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 `;
 
 const MailingListSection = () => {
-  const clearFields = () => {
-    const allInputs = document.querySelectorAll("input, textarea");
-    allInputs.forEach((el: HTMLInputElement | HTMLTextAreaElement) => {
-      el.value = ""; // eslint-disable-line
-    });
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    setStatus("loading");
+    const res = await addToMailchimp(email);
+
+    if (res.result === "success") {
+      setEmail("");
+      setStatus("success");
+    } else {
+      setStatus("error");
+    }
   };
+
+  const handleChange = e => {
+    setEmail(e.currentTarget.value);
+  };
+
+  const getFeedback = (): string => {
+    switch (status) {
+      case "success":
+        return "Got it. Thanks for subscribing!";
+      case "error":
+        return "Oops...something went wrong. Please try again.";
+      default:
+        return "";
+    }
+  };
+
+  const maybeRenderFeedback = status && (
+    <FormFeedbackBox type={status}>{getFeedback()}</FormFeedbackBox>
+  );
+
   return (
-    <>
-      <Section title="Join our mailing list" titleColor="#333" bg={"white"}>
-        <NetlifyForm name="newsletter">
-          {/* eslint-disable-next-line */}
-          {({ loading, error, success }) => {
-            if (success) {
-              clearFields();
-            }
-
-            const maybeRenderSuccess = success && (
-              <Feedback color="#05e642">
-                Got it. Thanks for subscribing!
-              </Feedback>
-            );
-
-            const maybeRenderError = error && (
-              <Feedback color="tomato">
-                Oops...something went wrong. Please try again.
-              </Feedback>
-            );
-
-            const maybeRenderFeedback = !success && !error && (
-              <Feedback>
-                Stay up to date about our latest products and promotions.
-              </Feedback>
-            );
-
-            return (
-              <div style={{ textAlign: "center" }}>
-                <input type="hidden" name="form-name" value="newsletter" />
-                <FormWrapper>
-                  {maybeRenderSuccess}
-                  {maybeRenderError}
-                  {maybeRenderFeedback}
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    aria-label="Email Address"
-                    required={true}
-                  />
-                  <PurpleButton type="submit" disabled={loading}>
-                    Submit
-                  </PurpleButton>
-                </FormWrapper>
-              </div>
-            );
-          }}
-        </NetlifyForm>
-      </Section>
-    </>
+    <Section title="Join Our Mailing List" titleColor="#333" bg={"white"}>
+      <FormWrapper>
+        <h3>Stay up to date with our new products and promotions.</h3>
+        <br />
+        <Form onSubmit={handleSubmit}>
+          <Input
+            type="email"
+            required={true}
+            aria-label="Email Address"
+            placeholder="Your Email Address"
+            value={email}
+            onChange={handleChange}
+            style={{ maxWidth: "350px" }}
+          />
+          <Button type="submit">Subscribe!</Button>
+        </Form>
+        {maybeRenderFeedback}
+      </FormWrapper>
+    </Section>
   );
 };
 

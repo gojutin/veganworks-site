@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AmazonShopButton from "./amazon-shop-button";
+import { AmazonShopButton } from "./amazon-shop-button";
 
 const Wrapper = styled.article`
   padding: 10px;
@@ -9,24 +9,18 @@ const Wrapper = styled.article`
 `;
 
 const Image = styled.img`
-  width: 500px;
+  width: ${p => (p.theme.screens.sm ? "100%" : "500px")};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  @media (max-width: 500px) {
-    width: 100%;
-  }
 `;
 
 const Title = styled.h2`
   font-family: Alice;
   margin: 8px 0px;
-  font-size: 2rem;
-  @media (max-width: 500px) {
-    font-size: 1.5rem;
-  }
+  font-size: ${p => (p.theme.screens.sm ? "1.5rem" : "2rem")} 2rem;
 `;
 
 const PriceWrapper = styled.div`
@@ -79,4 +73,4 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
   );
 };
 
-export default SnackBoxListing;
+export { SnackBoxListing };

@@ -1,8 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import SnackBoxListing from "../common/snack-box-listing";
-import Section from "../common/section";
+
+// Components
+import { Section } from "../common/section";
+import { SnackBoxListing } from "../common/snack-box-listing";
 
 const ProductsWrapper = styled.section`
   display: flex;
@@ -41,7 +43,7 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
     return <SnackBoxListing key={node.data.Name} data={node.data} />;
   });
   return (
-    <Section bg="linear-gradient(white, #f3feff)" title="Our Snack Boxes">
+    <Section bg="linear-gradient(#c2d4f0, white)" title="Our Snack Boxes">
       <ProductsWrapper>{renderSnackBoxListings}</ProductsWrapper>
     </Section>
   );

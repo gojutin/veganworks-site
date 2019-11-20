@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
-import CommunitySolidarityChart from "../common/community-solidarity-chart";
+import { CommunitySolidarityChart } from "../common/community-solidarity-chart";
 import { useCommunitySolidarityData } from "../../queries/useCommunitySolidarityData";
 
 const CoverImage = styled(BackgroundImage)`
@@ -32,7 +32,7 @@ const InfoBox = styled.div`
   }
   a {
     text-decoration: none;
-    color: ${props => props.theme.colors.lightblue};
+    color: ${props => props.theme.colors.secondary4};
 
     :hover {
       text-decoration: underline;
@@ -42,6 +42,7 @@ const InfoBox = styled.div`
     padding: 0;
     margin: 0;
   }
+ 
 `;
 
 const CommunitySolidaritySection = () => {

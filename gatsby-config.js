@@ -9,6 +9,12 @@ const config = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: process.env.MAILCHIMP_SITE_URL,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: path.join(__dirname, `src`, `images`),
@@ -39,7 +45,7 @@ const config = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: ["Alice", "Open Sans", "Satisfy"],
+        fonts: ["Alice", "Satisfy"],
         display: "fallback",
       },
     },

@@ -1,4 +1,7 @@
+// DEPRECATED IN FAVOR OF SVGS
+
 import { graphql, useStaticQuery } from "gatsby";
+import useMedia from "use-media";
 
 const useVeganWorksLogo = () => {
   const data = useStaticQuery(graphql`
@@ -21,7 +24,12 @@ const useVeganWorksLogo = () => {
       }
     }
   `);
-  return data;
+  const isSmall = useMedia({ maxWidth: 500 });
+
+  const logoData = isSmall
+    ? data.mobileLogo.childImageSharp.fluid
+    : data.desktopLogo.childImageSharp.fluid;
+  return logoData;
 };
 
 export { useVeganWorksLogo };

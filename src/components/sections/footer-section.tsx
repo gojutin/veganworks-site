@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import FooterWave from '../../svgs/footer-wave.svg'
 
 const StyledFooter = styled.footer`
   margin-top: -20px;
@@ -8,7 +9,7 @@ const StyledFooter = styled.footer`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  background: ${props => props.theme.colors.purple};
+  background: #18cdb5;
   color: white;
   text-align: center;
   font-family: Alice;
@@ -16,28 +17,27 @@ const StyledFooter = styled.footer`
 `;
 
 const Wave = styled.svg.attrs(() => ({
-  xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 1440 320",
 }))`
   background: white;
 
   path {
-    fill: ${props => props.theme.colors.purple};
+    fill: ${props => props.theme.colors.primary5};
   }
 `;
 
 const FooterSection = () => {
   return (
     <>
-      <Wave>
-        <path
-          fillOpacity="1"
-          d="M0,256L80,266.7C160,277,320,299,480,282.7C640,267,800,213,960,197.3C1120,181,1280,203,1360,213.3L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-        />
-      </Wave>
+
+      <img src={FooterWave} alt="wave" />
+ 
       <StyledFooter>
-        <span>info@veganworks.com</span>
-        {/* <Link to="/vendors">Vendors</Link> */}
+        <span>
+          <Link style={{ color: "white" }} to="contact">
+            Contact Us
+          </Link>
+        </span>
         <span>&reg; 2019 VeganWorks, Inc.</span>
       </StyledFooter>
     </>

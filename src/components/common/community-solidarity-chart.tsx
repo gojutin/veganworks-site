@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
 const SectionWrapper = styled.section`
-  background: #091424;
+  background: ${({theme}) => theme.colors.secondary9};
   padding: 80px 10px;
   min-height: 600px;
 `;
@@ -17,17 +17,18 @@ const ChartWrapper = styled.div`
 `;
 
 const InfoMotionWrapper = styled(motion.div)`
-  color: #f9e6ff;
+  color: white;
   text-align: center;
-
   margin: 0;
   padding: 0;
   font-family: Alice;
 
   h3 {
     font-size: 50px;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+    line-height: 50px;
+    color: ${({ theme }) => theme.colors.secondary3};
   }
 
   span.lbs {
@@ -37,6 +38,7 @@ const InfoMotionWrapper = styled(motion.div)`
     font-size: 20px;
     padding: 0;
     margin: 0;
+    color: ${({ theme }) => theme.colors.secondary3};
   }
 `;
 
@@ -63,7 +65,7 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
           nrOfLevels={20}
           percent={0.76}
           hideText={true}
-          colors={["red", "limegreen"]}
+          colors={["tomato", "#1affd1"]}
           needleColor="#dadada"
           needleBaseColor="#333"
           arcWidth={0.2}
@@ -81,8 +83,8 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
           </h3>
           <p>of fresh groceries and counting!</p>
           <p style={{ color: "white", padding: "20px", fontSize: "16px" }}>
-            For every dollar donated, Community Solidarity is able to provide 8
-            pounds of fresh groceries to a family in need.
+            For every dollar donated, Community Solidarity is able to provide
+            eight pounds of fresh groceries to a family in need.
           </p>
         </InfoMotionWrapper>
       </ChartWrapper>
@@ -90,4 +92,4 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
   );
 };
 
-export default CommunitySolidarityChart;
+export { CommunitySolidarityChart };
