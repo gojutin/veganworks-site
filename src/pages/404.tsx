@@ -8,9 +8,9 @@ import { LostCover } from "../components/common/lost-cover";
 import { useGetOutSign } from "../queries/useGetOutSign";
 import Img from "gatsby-image";
 
-const x = [30, 20, 30, -10, 20, 30, 0];
-const y = [-40, -10, -20, 0, 20, 25, 0];
-const scale = [0.5, 0.8, 0.8, 1.8, 2.3, 3.0, 3.0, 2.5];
+const x = [30, 20, 30, 0, 20, 30, 20, 0];
+const y = [-40, -10, -20, 0, 20, 25, 10, 0];
+const scale = [0.5, 0.8, 0.8, 1.8, 2.3, 3.0, 3.5, 2.5];
 const rotate = [0, -10, 10, 5, 0, 5, -5];
 const opacity = [0, 0.8, 0, 0.1, 0.5, 1, 1, 0];
 const Owl = styled(motion.svg).attrs(props => ({
@@ -30,7 +30,7 @@ const Owl = styled(motion.svg).attrs(props => ({
     rotate,
     opacity,
   },
-  transition: { duration: 30, easing: "outIn", delay: 2 },
+  transition: { duration: 40, easing: "outIn", delay: 2 },
 }))`
   z-index: 0;
 `;
@@ -47,6 +47,7 @@ const Container = styled.div`
   overflow: hidden;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
   h1 {
     color: ${({ theme }) => theme.colors.gray2};
