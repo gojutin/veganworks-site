@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import FooterWave from "../../svgs/footer-wave.svg";
+import FooterWave from "../../svgs/farm-animals.svg";
 
 const StyledFooter = styled.footer`
   margin-top: -10px;
