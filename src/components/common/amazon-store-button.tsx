@@ -24,7 +24,7 @@ const AmazonStoreButton: React.FC<AmazonStoreButtonProps> = ({ url }) => {
       <StyledButton whileHover={animateSettings} whileTap={animateSettings}>
         <img src={AmazonLogo} height="30px" alt="Amazon Logo" />
         <span style={{ margin: "5px 0px 5px 10px" }}>
-          Visit our Amazon store
+          Visit Our Amazon Store
         </span>
       </StyledButton>
     </Anchor>
