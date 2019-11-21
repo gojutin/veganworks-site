@@ -29,9 +29,8 @@ const Owl = styled(motion.svg).attrs(props => ({
     scale,
     rotate,
     opacity,
-    fill: ["red", "yellow"],
   },
-  transition: { duration: 100, easing: "outIn", type: "tween" },
+  transition: { duration: 100, easing: "outIn" },
 }))`
   z-index: 0;
 `;
@@ -44,6 +43,7 @@ const StyledLink = styled(Link)`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  max-height: 100vh;
   align-items: center;
   justify-content: center;
   flex: 1;
