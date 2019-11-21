@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
 const SectionWrapper = styled.section`
-  background: ${({theme}) => theme.colors.secondary9};
+  background: ${({ theme }) => theme.colors.secondary9};
   padding: 80px 10px;
   min-height: 600px;
 `;
@@ -62,10 +62,10 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
       <ChartWrapper>
         <GaugeChart
           id="pounds"
-          nrOfLevels={20}
+          nrOfLevels={18}
           percent={0.76}
           hideText={true}
-          colors={["tomato", "#1affd1"]}
+          colors={["#ff3385", "#99ffbb"]}
           needleColor="#dadada"
           needleBaseColor="#333"
           arcWidth={0.2}

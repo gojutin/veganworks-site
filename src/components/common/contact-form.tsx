@@ -10,6 +10,7 @@ import { Link } from "gatsby";
 
 const Container = styled.div`
   text-align: center;
+  padding: 15px;
   p {
     font-family: Alice, Helvetica, sans-serif;
     font-size: 20px;
@@ -29,7 +30,12 @@ const ContactForm = () => {
     <Container>
       <p>
         Please fill out the form below or email us at{" "}
-        <span style={{ color: secondary4 }}>info@veganworks.com</span>
+        <span
+          // href="mailto: info@veganworks.com?subject = Hello VeganWorks!&body = Message"
+          style={{ color: secondary4, userSelect: "all" }}
+        >
+          info@veganworks.com
+        </span>
       </p>
       <br />
       <NetlifyForm
