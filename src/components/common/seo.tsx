@@ -1,8 +1,12 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import { string } from "prop-types";
 
-const SEO = () => {
+interface Props {
+  title?: string;
+}
+const SEO: React.FC<Props> = ({ title }) => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -17,12 +21,12 @@ const SEO = () => {
 
   const metaData = data.site.siteMetadata;
 
-  const { title, description, url } = metaData;
+  const { description, url } = metaData;
   const mainLogo = `${url}/veganworks-logo.png`;
   return (
     <Helmet>
       <html lang="en" />
-      <title>{title}</title>
+      <title>{title || metaData.title}</title>
       <meta charSet="utf-8" />
       <link rel="canonical" href={url} />
       <meta name="description" content={description} />

@@ -15,12 +15,12 @@ const MotionWrapper = styled(motion.div)`
   flex-direction: column;
   align-items: center;
 `;
-const StyledLogo = styled.img`
+const StyledLogo = styled(motion.img)`
   max-width: 800px;
   width: 95%;
 `;
 
-const Tagline = styled.h3`
+const Tagline = styled(motion.h3)`
   font-size: ${p => (p.theme.screens.sm ? "1.6rem" : "2.3rem")};
   color: ${({ theme }) => theme.colors.secondary2};
   font-family: ${props => props.theme.font.cursive};
@@ -33,19 +33,33 @@ const CoverSection: React.FC = () => {
   return (
     <CoverImage>
       <MotionWrapper
-        initial={{ scale: 0.9, opacity: 0, x: 20 }}
-        animate={{ scale: 1, opacity: 1, x: 0 }}
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
       >
-        <StyledLogo src={logo} alt="VeganWorks Logo" />
+        <StyledLogo
+          src={logo}
+          alt="VeganWorks Logo"
+          initial={{ x: 50 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+        />
 
-        <Tagline>Delicious Vegan Snack Boxes</Tagline>
-        <div style={{ marginTop: "50px", width: "90%", textAlign: "center" }}>
+        <Tagline
+          initial={{ x: -50 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+        >
+          Delicious Vegan Snack Boxes
+        </Tagline>
+        <motion.div
+          style={{ marginTop: "50px", width: "90%", textAlign: "center" }}
+        >
           <AmazonStoreButton
             title="Visit our Amazon Store"
             url="https://www.amazon.com/stores/VeganWorks/VeganWorks/page/E2CD3E05-F08E-470F-BD10-F668DA807157"
           />
-        </div>
+        </motion.div>
       </MotionWrapper>
     </CoverImage>
   );

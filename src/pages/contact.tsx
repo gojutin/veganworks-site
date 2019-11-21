@@ -9,7 +9,7 @@ import { Section } from "../components/common/section";
 const Contact = () => {
   return (
     <Layout bg="white">
-      <SEO />
+      <SEO title="Contact VeganWorks" />
       <CoverImage>
         <Section bg="rgba(0,0,0,.6)" title="Contact Us" titleColor="white">
           <div style={{ padding: "10px" }}>
