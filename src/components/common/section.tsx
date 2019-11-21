@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledSection = styled.section<{ bg: string }>`
   background: ${props => props.bg};
-  padding: 40px 10px;
+  padding: 30px 10px;
 `;
 
 const SectionTitle = styled.h3<{ color: string }>`

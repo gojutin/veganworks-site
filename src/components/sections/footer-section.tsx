@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import FooterWave from "../../svgs/farm-animals.svg";
 
 const StyledFooter = styled.footer`
-  margin-top: -10px;
+  margin-top: -60px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

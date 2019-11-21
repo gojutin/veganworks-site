@@ -68,6 +68,8 @@ const FavoriteBrandsSection: React.FC = () => {
       bg="linear-gradient(#fff, #fff)"
       title="Bringing You Our Favorite Brands"
     >
+      <br />
+      <br />
       <BackgroundSlider duration={40} paused={isPaused}>
         <Wrapper>{renderBrandLogos}</Wrapper>
       </BackgroundSlider>
