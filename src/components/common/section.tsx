@@ -11,7 +11,7 @@ const SectionTitle = styled.h3<{ color: string }>`
   color: ${props => props.color || props.theme.colors.gray6};
   text-align: center;
   font-size: ${({ theme }) => (theme.screens.sm ? "2rem" : "3rem")};
-  margin: 3rem 0rem;
+  margin: 2rem 0rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;

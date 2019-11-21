@@ -33,27 +33,30 @@ const CoverSection: React.FC = () => {
   return (
     <CoverImage>
       <MotionWrapper
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+      // initial={{ scale: 0.9, opacity: 0 }}
+      // animate={{ scale: 1, opacity: 1 }}
+      // transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
       >
         <StyledLogo
           src={logo}
           alt="VeganWorks Logo"
-          initial={{ x: 50 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          initial={{ scale: 0.9, opacity: 0, x: 50 }}
+          animate={{ scale: 1, opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
         />
 
         <Tagline
-          initial={{ x: -50 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          initial={{ scale: 0.9, opacity: 0, x: -50 }}
+          animate={{ x: 0, scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
         >
           Delicious Vegan Snack Boxes
         </Tagline>
         <motion.div
           style={{ marginTop: "50px", width: "90%", textAlign: "center" }}
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4, ease: "easeInOut" }}
         >
           <AmazonStoreButton
             title="Visit our Amazon Store"

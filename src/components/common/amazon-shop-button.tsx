@@ -1,12 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import AmazonLogo from "../../svgs/amazon-icon.svg";
 import { Button } from "./button";
-
-const A = styled.a`
-  text-decoration: none;
-  display: block;
-`;
+import { Anchor } from "./anchor";
 
 interface AmazonShopButtonProps {
   url: string;
@@ -22,7 +17,12 @@ const AmazonShopButton: React.FC<AmazonShopButtonProps> = ({
     scale: 1.02,
   };
   return (
-    <A href={url} target="_blank" rel="noopener noreferrer">
+    <Anchor
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ display: "block" }}
+    >
       <Button
         style={{ minWidth: "250px" }}
         whileHover={animateSettings}
@@ -33,7 +33,7 @@ const AmazonShopButton: React.FC<AmazonShopButtonProps> = ({
           {isAvailable ? "Shop Now!" : "View on Amazon"}
         </span>
       </Button>
-    </A>
+    </Anchor>
   );
 };
 

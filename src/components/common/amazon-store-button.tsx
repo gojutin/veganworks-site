@@ -6,7 +6,7 @@ import { Anchor } from "./anchor";
 
 const StyledButton = styled(Button)`
   background: rgba(71, 138, 245, 0.3);
-  border: 3px solid white;
+  border: 2px solid white;
 `;
 
 type AmazonStoreButtonProps = {
