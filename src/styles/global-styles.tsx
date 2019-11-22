@@ -12,6 +12,9 @@ const GlobalStyles = createGlobalStyle`
     background: #111;
     letter-spacing: .5px;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   ${cssreset};
 `;
 

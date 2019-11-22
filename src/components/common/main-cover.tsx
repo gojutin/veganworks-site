@@ -14,13 +14,14 @@ const StyledCoverImage = styled(BackgroundImage)`
   min-height: 100vh;
   width: 100%;
   background-attachment: fixed;
+  -webkit-background-attachment: fixed;
   z-index: 0;
 `;
 
 const StyledBackgroundSection = styled.section`
   width: 100%;
   background-position: bottom center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
 `;
 

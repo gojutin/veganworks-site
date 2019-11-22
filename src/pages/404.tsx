@@ -8,11 +8,11 @@ import { SEO } from "../components/common/seo";
 import { LostCover } from "../components/common/404-cover";
 import { use404Sign } from "../queries/use404Sign";
 
-const x = [30, 20, 30, 0, 20, 30, 50, 0];
-const y = [-40, -10, -20, 0, 20, 55, 10, 0];
+const x = [100, 20, 0, 0, 20, 30, 50, 0];
+const y = [150, 50, 70, 200, 20, 55, 10, 0];
 const scale = [0.5, 0.8, 0.8, 1.8, 2.3, 3.0, 3.5, 2.5];
-const rotate = [0, -10, 10, 5, 0, 5, -5];
-const opacity = [0, 0.8, 0, 0.5, 0, 1, 1, 0];
+const rotate = [0, -5, 5, -5, 0, 5, -5];
+const opacity = [0, 1, 0, 0, 0.5, 0, 1, 0];
 const Owl = styled(motion.svg).attrs(props => ({
   viewBox: "0 0 90 112.5",
   height: "300px",
@@ -30,7 +30,7 @@ const Owl = styled(motion.svg).attrs(props => ({
     rotate,
     opacity,
   },
-  transition: { duration: 40, easing: "outIn", delay: 2 },
+  transition: { duration: 60, easing: "outIn", delay: 2 },
 }))`
   z-index: 0;
 `;
