@@ -13,8 +13,6 @@ const StyledCoverImage = styled(BackgroundImage)`
   margin: 0;
   min-height: 100vh;
   width: 100%;
-  background-attachment: fixed;
-  -webkit-background-attachment: fixed;
   z-index: 0;
 `;
 
