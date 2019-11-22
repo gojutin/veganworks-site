@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const useGetOutSign = () => {
+const use404Sign = () => {
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "get-out.png" }) {
+      logo: file(relativePath: { eq: "404-sign.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 420) {
             ...GatsbyImageSharpFluid_withWebp
@@ -15,4 +15,4 @@ const useGetOutSign = () => {
   return data.logo.childImageSharp.fluid;
 };
 
-export { useGetOutSign };
+export { use404Sign };

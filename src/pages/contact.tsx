@@ -1,6 +1,6 @@
 import React from "react";
 // Components
-import { CoverImage } from "../components/common/cover-image";
+import { CoverImage } from "../components/common/main-cover";
 import { Layout } from "../components/common/layout";
 import { SEO } from "../components/common/seo";
 import { ContactForm } from "../components/common/contact-form";

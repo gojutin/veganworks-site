@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import BackgroundImage from "gatsby-background-image";
-import { useLostCoverImage } from "../../queries/useLostCoverImage";
+import { use404Cover } from "../../queries/use404Cover";
 
 const StyledCoverImage = styled(BackgroundImage)`
   align-items: center;
@@ -25,8 +24,8 @@ const StyledBackgroundSection = styled.section`
 `;
 
 const LostCover: React.FC = ({ children }) => {
-  const data = useLostCoverImage();
-  const imageData = data.cover.childImageSharp.fluid;
+  const coverImage = use404Cover();
+  const imageData = coverImage.cover.childImageSharp.fluid;
 
   return (
     <StyledBackgroundSection>

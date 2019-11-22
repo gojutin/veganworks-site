@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const useLostCoverImage = () => {
+const use404Cover = () => {
   const data = useStaticQuery(graphql`
     query {
-      cover: file(relativePath: { eq: "lost-cover.jpg" }) {
+      cover: file(relativePath: { eq: "404-cover.jpg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
@@ -15,4 +15,4 @@ const useLostCoverImage = () => {
   return data;
 };
 
-export { useLostCoverImage };
+export { use404Cover };

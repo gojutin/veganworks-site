@@ -6,7 +6,7 @@ import VeganWorksLogoSmall from "../../svgs/veganworks-logo-sm.svg";
 import { motion } from "framer-motion";
 
 // Components
-import { CoverImage } from "../common/cover-image";
+import { CoverImage } from "../common/main-cover";
 import { AmazonStoreButton } from "../common/amazon-store-button";
 
 const Wrapper = styled(motion.div)`

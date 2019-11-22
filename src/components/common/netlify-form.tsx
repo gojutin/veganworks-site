@@ -51,7 +51,7 @@ const NetlifyForm: React.FC<NetlifyFormProps> = ({
             <FormWrapper>
               {children}
               <div>
-                <Button block={true} disabled={loading} type="submit">
+                <Button disabled={loading} type="submit">
                   Submit
                 </Button>
               </div>

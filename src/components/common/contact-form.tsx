@@ -14,7 +14,6 @@ const Container = styled.div`
   p {
     font-family: Alice, Helvetica, sans-serif;
     font-size: 20px;
-    color: white;
   }
 `;
 
@@ -28,7 +27,7 @@ const ContactForm = () => {
   const { secondary4 } = useTheme().colors;
   return (
     <Container>
-      <p>
+      <p style={{color: 'white'}}>
         Please fill out the form below or email us at{" "}
         <span
           // href="mailto: info@veganworks.com?subject = Hello VeganWorks!&body = Message"
@@ -40,7 +39,7 @@ const ContactForm = () => {
       <br />
       <NetlifyForm
         name="Contact"
-        successMessage="Thanks for reaching out. We will get back to you very soon :)"
+        successMessage="Thanks for reaching out. We will get back to you soon!"
       >
         <FieldsWrapper>
           <Input name="name" placeholder="Your Name" required={true} />

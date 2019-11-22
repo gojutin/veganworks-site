@@ -2,17 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 import { Layout } from "../components/common/layout";
 import { SEO } from "../components/common/seo";
-import { LostCover } from "../components/common/lost-cover";
-import { useGetOutSign } from "../queries/useGetOutSign";
-import Img from "gatsby-image";
+import { LostCover } from "../components/common/404-cover";
+import { use404Sign } from "../queries/use404Sign";
 
-const x = [30, 20, 30, 0, 20, 30, 20, 0];
-const y = [-40, -10, -20, 0, 20, 25, 10, 0];
+const x = [30, 20, 30, 0, 20, 30, 50, 0];
+const y = [-40, -10, -20, 0, 20, 55, 10, 0];
 const scale = [0.5, 0.8, 0.8, 1.8, 2.3, 3.0, 3.5, 2.5];
 const rotate = [0, -10, 10, 5, 0, 5, -5];
-const opacity = [0, 0.8, 0, 0.1, 0.5, 1, 1, 0];
+const opacity = [0, 0.8, 0, 0.5, 0, 1, 1, 0];
 const Owl = styled(motion.svg).attrs(props => ({
   viewBox: "0 0 90 112.5",
   height: "300px",
@@ -56,7 +56,7 @@ const Container = styled.div`
 `;
 
 const NotFoundPage = () => {
-  const sign = useGetOutSign();
+  const sign = use404Sign();
   return (
     <Layout>
       <SEO title="404: Not found" />
@@ -79,7 +79,7 @@ const NotFoundPage = () => {
             <motion.div
               initial={{ y: 250 }}
               animate={{ y: 0 }}
-              transition={{ duration: 2, delay: 4, easing: "easeOut" }}
+              transition={{ duration: 1, delay: 4, easing: "easeOut" }}
             >
               <StyledLink to="/">
                 <Img fluid={sign} style={{ width: "300px" }} />
