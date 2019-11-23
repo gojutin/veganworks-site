@@ -42,7 +42,6 @@ const InfoBox = styled.div`
     padding: 0;
     margin: 0;
   }
- 
 `;
 
 const CommunitySolidaritySection = () => {

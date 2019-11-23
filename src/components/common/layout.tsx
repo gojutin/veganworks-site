@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { GlobalStyles, ThemeProvider } from "../../styles";
+import { SideNav } from "./side-nav";
 
 const Main = styled.div<{ bg?: string }>`
   margin: 0px;
@@ -9,10 +10,32 @@ const Main = styled.div<{ bg?: string }>`
   min-height: 100vh;
 `;
 
-const Layout: React.FC<{ bg?: string }> = ({ children, bg }) => {
+const items = [
+  {
+    title: "Home",
+    link: "/",
+  },
+
+  {
+    title: "FAQS",
+    link: "/faqs",
+  },
+  {
+    title: "Contact Us",
+    link: "/contact",
+  },
+];
+
+const Layout: React.FC<{ bg?: string; menu?: boolean }> = ({
+  children,
+  bg,
+  menu = true,
+}) => {
   return (
     <ThemeProvider>
       <GlobalStyles />
+      {menu && <SideNav items={items} />}
+
       <Main bg={bg}>{children}</Main>
     </ThemeProvider>
   );

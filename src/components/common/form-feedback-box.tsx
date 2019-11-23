@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const FormFeedbackBox = styled.p<{ type?: string }>`
-  color: ${props => (props.type === "success" ? props.theme.colors.secondary2 : "tomato")};
+  color: ${props =>
+    props.type === "success" ? props.theme.colors.secondary2 : "tomato"};
   font-family: Alice;
   border-radius: 12px;
   background: ${props => props.theme.colors.secondary7};

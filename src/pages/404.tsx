@@ -31,9 +31,7 @@ const Owl = styled(motion.svg).attrs(props => ({
     opacity,
   },
   transition: { duration: 60, easing: "outIn", delay: 2 },
-}))`
-  z-index: 0;
-`;
+}))``;
 
 const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.secondary4};
@@ -58,7 +56,7 @@ const Container = styled.div`
 const NotFoundPage = () => {
   const sign = use404Sign();
   return (
-    <Layout>
+    <Layout menu={false}>
       <SEO title="404: Not found" />
       <LostCover>
         <Container>

@@ -13,7 +13,6 @@ const StyledCoverImage = styled(BackgroundImage)`
   margin: 0;
   min-height: 100vh;
   width: 100%;
-  z-index: 0;
 `;
 
 const StyledBackgroundSection = styled.section`

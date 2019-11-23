@@ -4,6 +4,7 @@ import { useTheme } from "../../styles";
 import VeganWorksLogo from "../../svgs/veganworks-logo.svg";
 import VeganWorksLogoSmall from "../../svgs/veganworks-logo-sm.svg";
 import { motion } from "framer-motion";
+// import { SideNav } from "../common/side-nav";
 
 // Components
 import { CoverImage } from "../common/main-cover";

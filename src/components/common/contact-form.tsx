@@ -24,14 +24,14 @@ const FieldsWrapper = styled.div`
 `;
 
 const ContactForm = () => {
-  const { secondary4 } = useTheme().colors;
+  const { secondary3 } = useTheme().colors;
   return (
     <Container>
-      <p style={{color: 'white'}}>
+      <p style={{ color: "white" }}>
         Please fill out the form below or email us at{" "}
         <span
           // href="mailto: info@veganworks.com?subject = Hello VeganWorks!&body = Message"
-          style={{ color: secondary4, userSelect: "all" }}
+          style={{ color: secondary3, userSelect: "all" }}
         >
           info@veganworks.com
         </span>
