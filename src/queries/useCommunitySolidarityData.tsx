@@ -5,7 +5,7 @@ const useCommunitySolidarityData = () => {
     query {
       desktop: file(relativePath: { eq: "community-solidarity-collage.png" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(quality: 98, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -14,7 +14,7 @@ const useCommunitySolidarityData = () => {
         childImageSharp {
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.
-          fluid(quality: 90, maxWidth: 500) {
+          fluid(quality: 98, maxWidth: 500) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

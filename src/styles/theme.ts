@@ -31,7 +31,7 @@ const theme = {
     primary9: "#280332",
     // Sky Blue-ish
     secondary1: "#ebf1fa",
-    secondary2: "#adc6eb",
+    secondary2: "#D6E2F5",
     secondary3: "#85a9e0",
     secondary4: "#5c8dd6",
     secondary5: "#3370cc",

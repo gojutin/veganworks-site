@@ -19,7 +19,7 @@ const ListItem = styled(motion.li)`
   align-items: center;
   cursor: pointer;
   font-size: 18px;
-  width: 290px;
+  width: 240px;
   border-radius: 0px 100px 100px 0px;
   text-transform: uppercase;
   background: transparent;

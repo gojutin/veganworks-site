@@ -1,8 +1,7 @@
 export const faqs = [
   {
     q: "Are all of your snack boxes vegan?",
-    a:
-      "Yes! We are a vegan family and do not sell products that are not vegan and non-GMO.",
+    a: "Yes! We only sell products that are both vegan and non-GMO.",
   },
   {
     q: "Do any of your products contain sugar that was refined with bone char?",
@@ -26,6 +25,6 @@ export const faqs = [
   {
     q: "I am a vendor. Would you consider our products for your snack boxes?",
     a:
-      "Absolutely! If your products are vegan and non-gmo, we would love to chat! Please fill out our contact form or email us at info@veganworks.com to get it touch.",
+      "Absolutely! Please fill out our contact form or email us at info@veganworks.com. We'd love to chat.",
   },
 ];

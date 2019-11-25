@@ -23,7 +23,7 @@ const StyledLogo = styled(motion.img)`
 
 const Tagline = styled(motion.h3)`
   font-size: ${p => (p.theme.screens.sm ? "1.6rem" : "2.3rem")};
-  color: ${({ theme }) => theme.colors.secondary2};
+  color: ${({ theme }) => theme.colors.secondary1};
   font-family: ${props => props.theme.font.cursive};
   text-align: center;
 `;
