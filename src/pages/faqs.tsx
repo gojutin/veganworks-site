@@ -10,25 +10,28 @@ import { Section } from "../components/common/section";
 import { faqs } from "../constants/faqs";
 
 const Question = styled.p`
-  font-size: 25px;
+  font-size: 28px;
   color: ${({ theme }) => theme.colors.primary4};
   text-transform: uppercase;
   padding: 10px 0px;
+  line-height: 30px;
 `;
 
 const Answer = styled.p`
   color: ${({ theme }) => theme.colors.secondary1};
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed ${({ theme }) => theme.colors.gray7};
 `;
 
 const Container = styled.div`
-  min-width: 80vw;
+  min-width: 70vw;
 `;
 
 const Wrapper = styled.div`
   padding: 10px 40px;
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
 `;
 
@@ -48,10 +51,21 @@ const Contact = () => {
         <Section bg="rgba(0,0,0,.8)" title="FAQS" titleColor="white">
           <Container>
             <Wrapper>
-              {renderFAQS}{" "}
-              <Link style={{ color: "white" }} to="contact">
-                Contact Us
-              </Link>
+              {renderFAQS}
+              <div style={{ display: "flex", justifyContent: "space-around" }}>
+                <Link
+                  style={{ color: "lightskyblue", margin: "0 auto" }}
+                  to="/"
+                >
+                  Go Back
+                </Link>
+                <Link
+                  style={{ color: "lightskyblue", margin: "0 auto" }}
+                  to="/contact"
+                >
+                  Contact Us
+                </Link>
+              </div>
             </Wrapper>
           </Container>
         </Section>

@@ -31,6 +31,8 @@ const Background = styled(motion.div)`
   );
   height: 400px;
   border-radius: 0px 0px 50px 0px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 `;
 
 const sidebar = {
@@ -43,7 +45,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(20px at 40px 37px)",
+    clipPath: "circle(20px at 40px 40px)",
     transition: {
       delay: 0.3,
       type: "spring",
