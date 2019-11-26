@@ -74,9 +74,10 @@ export const SideNav: React.FC<{ items: Item[] }> = ({ items }) => {
       custom={{ height: "200px" }}
       ref={containerRef}
     >
-      <Background variants={sidebar} />
+      <Background variants={sidebar}>
+        <MenuToggle toggle={toggleOpen} />
+      </Background>
       <Navigation items={items} />
-      <MenuToggle toggle={toggleOpen} />
     </Nav>
   );
 };

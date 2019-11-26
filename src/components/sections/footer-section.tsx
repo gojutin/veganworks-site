@@ -22,7 +22,7 @@ const FooterSection = () => {
       <img src={FooterWave} alt="wave" />
       <StyledFooter>
         <span>
-          <Link style={{ color: "white" }} to="contact">
+          <Link style={{ color: "white" }} to="/contact">
             Contact Us
           </Link>
         </span>
