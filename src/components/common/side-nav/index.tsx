@@ -21,10 +21,12 @@ const Background = styled(motion.div)`
   bottom: 0;
   width: 250px;
   background: rgb(255, 255, 255);
+
   background: linear-gradient(
     162deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 65%,
+    rgba(255, 255, 255, 0.8813900560224089) 48%,
+    rgba(255, 255, 255, 0) 77%,
     rgba(255, 255, 255, 0) 100%
   );
   height: 400px;

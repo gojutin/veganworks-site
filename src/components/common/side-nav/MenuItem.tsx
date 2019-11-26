@@ -25,7 +25,7 @@ const ListItem = styled(motion.li)`
   background: transparent;
   transition: background 0.5s ease-in;
   :hover {
-    background: ${({ theme }) => theme.colors.secondary2};
+    background: ${({ theme }) => theme.colors.primary2};
   }
 `;
 const variants = {
