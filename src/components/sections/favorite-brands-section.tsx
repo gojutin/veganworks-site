@@ -22,11 +22,11 @@ const Wrapper = styled(motion.div)`
     cursor: default;
     transition: all 0.25s ease;
     overflow: hidden;
-    filter: grayscale(100%);
+    /* filter: grayscale(0%); */
     :hover {
       opacity: 1;
       transform: scale(1.1);
-      filter: grayscale(0%);
+      /* filter: grayscale(0%); */
     }
   }
 `;

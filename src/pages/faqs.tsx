@@ -33,6 +33,7 @@ const Wrapper = styled.div`
   padding: 10px 40px;
   max-width: 960px;
   margin: 0 auto;
+  margin-bottom: 50px;
 `;
 
 const Contact = () => {

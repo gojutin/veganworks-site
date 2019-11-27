@@ -11,7 +11,7 @@ const Input = styled(motion.input).attrs(() => ({
   max-width: 600px;
   font-size: 18px;
   margin: 10px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   border: 1px solid #333;
   border-radius: 8px;
   outline: none;

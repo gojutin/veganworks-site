@@ -15,13 +15,9 @@ type AmazonStoreButtonProps = {
 };
 
 const AmazonStoreButton: React.FC<AmazonStoreButtonProps> = ({ url }) => {
-  const animateSettings = {
-    boxShadow: "0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.1)",
-    scale: 1.03,
-  };
   return (
     <Anchor href={url}>
-      <StyledButton whileHover={animateSettings} whileTap={animateSettings}>
+      <StyledButton>
         <img src={AmazonLogo} height="30px" alt="Amazon Logo" />
         <span style={{ margin: "5px 0px 5px 10px" }}>
           Visit Our Amazon Store

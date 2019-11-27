@@ -4,7 +4,6 @@ import { useTheme } from "../../styles";
 import VeganWorksLogo from "../../svgs/veganworks-logo.svg";
 import VeganWorksLogoSmall from "../../svgs/veganworks-logo-sm.svg";
 import { motion } from "framer-motion";
-// import { SideNav } from "../common/side-nav";
 
 // Components
 import { CoverImage } from "../common/main-cover";
@@ -29,6 +28,17 @@ const Tagline = styled(motion.h3)`
 `;
 
 const CoverSection: React.FC = () => {
+  // const [scrollPosition, setScrollPosition] = useState(0);
+  // const { scrollYProgress } = useViewportScroll();
+
+  // useEffect(() => {
+  //   scrollYProgress.onChange(v => {
+  //     if (v) {
+  //       setScrollPosition(v);
+  //     }
+  //   });
+  // }, [scrollYProgress]);
+
   const isSmall = useTheme().screens.sm;
   const logo = isSmall ? VeganWorksLogoSmall : VeganWorksLogo;
   return (

@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
 import { CommunitySolidarityChart } from "../common/community-solidarity-chart";
 import { useCommunitySolidarityData } from "../../queries/useCommunitySolidarityData";
+import { Anchor } from "../common/anchor";
 
 const CoverImage = styled(BackgroundImage)`
   height: 100vh;
@@ -30,14 +31,14 @@ const InfoBox = styled.div`
     padding: 0;
     margin: 0;
   }
-  a {
+  /* a {
     text-decoration: none;
     color: ${props => props.theme.colors.secondary4};
 
     :hover {
       text-decoration: underline;
     }
-  }
+  } */
   p {
     padding: 0;
     margin: 0;
@@ -65,9 +66,9 @@ const CommunitySolidaritySection = () => {
           <Img fluid={csLogo} alt="Community Solidarity Logo" />
           <p>
             Learn more at{" "}
-            <a href="https://www.communitysolidarity.org">
+            <Anchor link={true} href="https://www.communitysolidarity.org">
               CommunitySolidarity.org
-            </a>
+            </Anchor>
           </p>
         </InfoBox>
       </CoverImage>

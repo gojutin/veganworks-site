@@ -11,7 +11,7 @@ const TextArea = styled(motion.textarea).attrs(() => ({
   margin: 10px;
   max-width: 600px;
   font-size: 18px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   border: 1px solid #333;
   border-radius: 10px;
   outline: none;

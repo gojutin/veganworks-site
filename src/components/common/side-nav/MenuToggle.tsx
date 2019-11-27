@@ -22,7 +22,7 @@ const Path = props => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
+    stroke="#c711fc"
     strokeLinecap="round"
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...props}
@@ -45,7 +45,7 @@ const path3Variants = {
 };
 
 export const MenuToggle = ({ toggle }) => (
-  <Button onClick={toggle}>
+  <Button onClick={toggle} style={{ transform: "scale(1.2)" }}>
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path variants={path1Variants} />
       <Path

@@ -6,7 +6,7 @@ import { Navigation } from "./Navigation";
 import { useOnClickOutside } from "./use-click-outside";
 
 const Nav = styled(motion.nav)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -15,7 +15,7 @@ const Nav = styled(motion.nav)`
 `;
 
 const Background = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -43,7 +43,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(20px at 40px 37px)",
+    clipPath: "circle(0px at 40px 37px)",
     transition: {
       delay: 0.3,
       type: "spring",
@@ -74,9 +74,8 @@ export const SideNav: React.FC<{ items: Item[] }> = ({ items }) => {
       custom={{ height: "200px" }}
       ref={containerRef}
     >
-      <Background variants={sidebar}>
-        <MenuToggle toggle={toggleOpen} />
-      </Background>
+      <Background variants={sidebar} />
+      <MenuToggle toggle={toggleOpen} />
       <Navigation items={items} />
     </Nav>
   );
