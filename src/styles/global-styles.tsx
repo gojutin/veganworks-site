@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import cssreset from "modern-css-reset";
 
 const GlobalStyles = createGlobalStyle`
-  @import url("node_modules/modern-css-reset/dist/reset.min.css");
   body {
     padding: 0;
     margin: 0;
@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
-
+  ${cssreset};
 `;
 
 export { GlobalStyles };
