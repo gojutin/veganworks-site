@@ -7,6 +7,10 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.secondary8};
   font-size: 20px;
+  transition: color 0.2s ease-in;
+  :hover {
+    color: ${({ theme }) => theme.colors.primary5};
+  }
 `;
 
 const ListItem = styled(motion.li)`
@@ -23,10 +27,6 @@ const ListItem = styled(motion.li)`
   border-radius: 0px 100px 100px 0px;
   text-transform: uppercase;
   background: transparent;
-  transition: background 0.5s ease-in;
-  :hover {
-    background: ${({ theme }) => theme.colors.primary2};
-  }
 `;
 const variants = {
   open: {
@@ -48,19 +48,18 @@ const variants = {
 };
 
 type Props = {
+  onClick: () => void;
   item: {
     title: string;
     link: string;
   };
 };
-export const MenuItem: React.FC<Props> = ({ item }) => {
+export const MenuItem: React.FC<Props> = ({ item, onClick }) => {
   return (
-    <li>
+    <ListItem variants={variants} whileTap={{ scale: 0.98 }} onClick={onClick}>
       <StyledLink activeStyle={{ color: "#c711fc" }} to={item.link}>
-        <ListItem variants={variants} whileTap={{ scale: 0.95 }}>
-          {item.title}
-        </ListItem>
+        {item.title}
       </StyledLink>
-    </li>
+    </ListItem>
   );
 };

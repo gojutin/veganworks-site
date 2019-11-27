@@ -67,6 +67,8 @@ export const SideNav: React.FC<{ items: Item[] }> = ({ items }) => {
     }
   });
 
+  const handleClickMenuItem = () => toggleOpen();
+
   return (
     <Nav
       initial={false}
@@ -76,7 +78,7 @@ export const SideNav: React.FC<{ items: Item[] }> = ({ items }) => {
     >
       <Background variants={sidebar} />
       <MenuToggle toggle={toggleOpen} />
-      <Navigation items={items} />
+      <Navigation items={items} onClick={handleClickMenuItem} />
     </Nav>
   );
 };

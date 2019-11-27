@@ -40,10 +40,11 @@ export const Link: React.FC<GatsbyLinkProps<null> | AnchorLink> = ({
         {children}
       </GatsbyLink>
     );
+  } else {
+    return (
+      <StyledLink style={style} color={color} href={href}>
+        {children}
+      </StyledLink>
+    );
   }
-  return (
-    <StyledLink style={style} color={color} href={href}>
-      {children}
-    </StyledLink>
-  );
 };

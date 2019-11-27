@@ -54,12 +54,8 @@ const Contact = () => {
             <Wrapper>
               {renderFAQS}
               <div style={{ display: "flex", justifyContent: "space-around" }}>
-                <Link style={{ margin: "0 auto" }} to="/">
-                  Go Back
-                </Link>
-                <Link style={{ margin: "0 auto" }} to="/contact">
-                  Contact Us
-                </Link>
+                <Link to="/">Go Back</Link>
+                <Link to="/contact">Contact Us</Link>
               </div>
             </Wrapper>
           </Container>

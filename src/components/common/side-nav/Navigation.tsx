@@ -26,7 +26,12 @@ const UnorderedList = styled(motion.ul)`
   width: 230px;
 `;
 
-export const Navigation: React.FC<{ items: Item[] }> = ({ items }) => {
-  const renderItems = items.map(i => <MenuItem item={i} key={i.title} />);
+export const Navigation: React.FC<{ items: Item[]; onClick: () => void }> = ({
+  items,
+  onClick,
+}) => {
+  const renderItems = items.map(i => (
+    <MenuItem item={i} key={i.title} onClick={onClick} />
+  ));
   return <UnorderedList variants={variants}>{renderItems}</UnorderedList>;
 };
