@@ -5,10 +5,12 @@ import { MenuItem } from "./MenuItem";
 
 const variants = {
   open: {
+    display: "block",
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
   },
   closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    display: "none",
+    transition: { staggerChildren: 0.05, staggerDirection: -1, delay: 0.5 },
   },
 };
 
@@ -26,12 +28,14 @@ const UnorderedList = styled(motion.ul)`
   width: 230px;
 `;
 
-export const Navigation: React.FC<{ items: Item[]; onClick: () => void }> = ({
-  items,
-  onClick,
-}) => {
+export const Navigation: React.FC<{
+  items: Item[];
+  onClick: () => void;
+  isOpen: boolean;
+}> = ({ items, onClick }) => {
   const renderItems = items.map(i => (
     <MenuItem item={i} key={i.title} onClick={onClick} />
   ));
+
   return <UnorderedList variants={variants}>{renderItems}</UnorderedList>;
 };
