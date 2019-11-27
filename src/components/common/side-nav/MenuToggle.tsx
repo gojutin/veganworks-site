@@ -49,7 +49,7 @@ const path3Variants = {
 };
 
 export const MenuToggle = ({ toggle }) => (
-  <Button onClick={toggle}>
+  <Button onClick={toggle} name="Menu Toggle">
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path variants={path1Variants} />
       <Path
