@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
 import { CommunitySolidarityChart } from "../common/community-solidarity-chart";
 import { useCommunitySolidarityData } from "../../queries/useCommunitySolidarityData";
-import { Anchor } from "../common/anchor";
+import { Link } from "../common/link";
 
 const CoverImage = styled(BackgroundImage)`
   height: 100vh;
@@ -66,9 +66,9 @@ const CommunitySolidaritySection = () => {
           <Img fluid={csLogo} alt="Community Solidarity Logo" />
           <p>
             Learn more at{" "}
-            <Anchor link={true} href="https://www.communitysolidarity.org">
+            <Link link={true} href="https://www.communitysolidarity.org">
               CommunitySolidarity.org
-            </Anchor>
+            </Link>
           </p>
         </InfoBox>
       </CoverImage>

@@ -1,7 +1,7 @@
 import React from "react";
 import AmazonLogo from "../../svgs/amazon-icon.svg";
 import { Button } from "./button";
-import { Anchor } from "./anchor";
+import { Link } from "./link";
 
 interface AmazonShopButtonProps {
   url: string;
@@ -13,14 +13,14 @@ const AmazonShopButton: React.FC<AmazonShopButtonProps> = ({
   isAvailable,
 }) => {
   return (
-    <Anchor href={url} style={{ display: "block" }}>
+    <Link href={url} style={{ textDecoration: "none" }}>
       <Button style={{ minWidth: "250px" }}>
         <img height={25} src={AmazonLogo} alt="Amazon Logo" />
         <span style={{ marginLeft: "10px" }}>
           {isAvailable ? "Shop Now!" : "View on Amazon"}
         </span>
       </Button>
-    </Anchor>
+    </Link>
   );
 };
 

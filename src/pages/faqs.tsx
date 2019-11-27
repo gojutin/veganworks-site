@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
 // Components
 import { CoverImage } from "../components/common/main-cover";
+import { Link } from "../components/common/link";
 import { Layout } from "../components/common/layout";
 import { SEO } from "../components/common/seo";
 import { Section } from "../components/common/section";
@@ -54,16 +54,10 @@ const Contact = () => {
             <Wrapper>
               {renderFAQS}
               <div style={{ display: "flex", justifyContent: "space-around" }}>
-                <Link
-                  style={{ color: "lightskyblue", margin: "0 auto" }}
-                  to="/"
-                >
+                <Link style={{ margin: "0 auto" }} to="/">
                   Go Back
                 </Link>
-                <Link
-                  style={{ color: "lightskyblue", margin: "0 auto" }}
-                  to="/contact"
-                >
+                <Link style={{ margin: "0 auto" }} to="/contact">
                   Contact Us
                 </Link>
               </div>

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+import { Link } from "../common/link";
 import FooterWave from "../../svgs/farm-animals.svg";
+import { useTheme } from "../../styles";
 
 const StyledFooter = styled.footer`
   margin-top: -60px;
@@ -17,16 +18,19 @@ const StyledFooter = styled.footer`
 `;
 
 const FooterSection = () => {
+  const { colors } = useTheme();
   return (
     <>
       <img src={FooterWave} alt="wave" />
       <StyledFooter>
         <span>
-          <Link style={{ color: "white" }} to="/contact">
+          <Link color={colors.secondary7} to="/contact">
             Contact Us
           </Link>
         </span>
-        <span>&reg; 2019 VeganWorks, Inc.</span>
+        <span style={{ color: colors.secondary9 }}>
+          &reg; 2019 VeganWorks, Inc.
+        </span>
       </StyledFooter>
     </>
   );

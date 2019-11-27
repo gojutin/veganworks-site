@@ -6,7 +6,7 @@ import { useTheme } from "../../styles";
 import { Input } from "./input";
 import { TextArea } from "./textarea";
 import { NetlifyForm } from "./netlify-form";
-import { Link } from "gatsby";
+import { Link } from "./link";
 
 const Container = styled.div`
   text-align: center;

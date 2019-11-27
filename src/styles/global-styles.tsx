@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
   ${cssreset};
+
 `;
 
 export { GlobalStyles };
