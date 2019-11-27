@@ -12,10 +12,14 @@ const Button = styled.button`
   position: absolute;
   top: 18px;
   left: 15px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
   border-radius: 50%;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.9);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Path = props => (
@@ -45,7 +49,7 @@ const path3Variants = {
 };
 
 export const MenuToggle = ({ toggle }) => (
-  <Button onClick={toggle} style={{ transform: "scale(1.2)" }}>
+  <Button onClick={toggle}>
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path variants={path1Variants} />
       <Path
