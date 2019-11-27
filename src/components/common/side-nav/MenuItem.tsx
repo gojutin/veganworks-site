@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const ListItem = styled(motion.li)`
+const Wrapper = styled(motion.div)`
   display: block;
   margin: 0;
   padding: 10px 20px;
@@ -56,10 +56,16 @@ type Props = {
 };
 export const MenuItem: React.FC<Props> = ({ item, onClick }) => {
   return (
-    <ListItem variants={variants} whileTap={{ scale: 0.98 }} onClick={onClick}>
+    <li>
       <StyledLink activeStyle={{ color: "#c711fc" }} to={item.link}>
-        {item.title}
+        <Wrapper
+          variants={variants}
+          whileTap={{ scale: 0.98 }}
+          onClick={onClick}
+        >
+          {item.title}
+        </Wrapper>
       </StyledLink>
-    </ListItem>
+    </li>
   );
 };
