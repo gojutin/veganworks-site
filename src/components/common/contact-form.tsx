@@ -29,12 +29,12 @@ const ContactForm = () => {
     <Container>
       <p style={{ color: "white" }}>
         Please fill out the form below or email us at{" "}
-        <span
-          // href="mailto: info@veganworks.com?subject = Hello VeganWorks!&body = Message"
-          style={{ color: secondary3, userSelect: "all" }}
+        <Link
+          href="mailto:info@veganworks.com?subject = Hello VeganWorks!"
+          style={{ display: "inline", userSelect: "all" }}
         >
           info@veganworks.com
-        </span>
+        </Link>
       </p>
       <br />
       <NetlifyForm

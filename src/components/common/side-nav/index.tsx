@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
@@ -19,18 +19,17 @@ const Background = styled(motion.div)`
   top: 0;
   left: 0;
   bottom: 0;
-  width: 250px;
-  background: rgb(255, 255, 255);
-
-  background: linear-gradient(
+  width: 200px;
+  background: rgba(255, 255, 255, 1);
+  /* background: linear-gradient(
     162deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(255, 255, 255, 0.8813900560224089) 48%,
     rgba(255, 255, 255, 0) 77%,
     rgba(255, 255, 255, 0) 100%
-  );
-  height: 400px;
-  border-radius: 0px 0px 50px 0px;
+  ); */
+  height: 300px;
+  border-radius: 0px 0px 100px 0px;
 `;
 
 const sidebar = {
@@ -60,6 +59,17 @@ type Item = {
 
 export const SideNav: React.FC<{ items: Item[] }> = ({ items }) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (isOpen) {
+        toggleOpen();
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isOpen, toggleOpen]);
+
   const containerRef = useRef(null);
   useOnClickOutside(containerRef, () => {
     if (isOpen) {

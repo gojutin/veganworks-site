@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Button = styled(motion.button).attrs(() => ({
   initial: { boxShadow: "none" },
-  whileHover: { scale: 1.02, boxShadow: "0 0px 4px  #fff" },
+  whileHover: { scale: 1.02, boxShadow: "0 0px 10px  #fff" },
   transition: { duration: 0.2 },
 }))`
   display: inline-flex;
