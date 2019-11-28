@@ -64,7 +64,7 @@ const SnackBoxListing: React.FC<SnackBoxListingProps> = ({ data }) => {
   );
   return (
     <Wrapper>
-      <Image src={data.Image[0].url} alt={data.Name} />
+      <Image src={data.Image[0].thumbnails.large.url} alt={data.Name} />
       <Title>{data.Name}</Title>
       {renderPrice}
       <AmazonShopButton url={data.Link} isAvailable={isHolidaySeason} />
