@@ -28,7 +28,7 @@ const Background = styled(motion.div)`
     rgba(255, 255, 255, 0) 100%
   ); */
   height: 300px;
-  border-radius: 0px 0px 60px 0px;
+  border-radius: 0px 0px 40px 0px;
 `;
 
 const sidebar = {

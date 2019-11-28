@@ -14,7 +14,7 @@ const StyledLink = styled(Link)`
 `;
 
 const Wrapper = styled(motion.div)`
-  display: block;
+  display: inline-block;
   margin: 0;
   padding: 10px 20px;
   list-style: none;
