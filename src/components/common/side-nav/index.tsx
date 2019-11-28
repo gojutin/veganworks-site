@@ -9,7 +9,6 @@ const Nav = styled(motion.nav)`
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
   width: 250px;
   z-index: 10000;
 `;
@@ -29,7 +28,7 @@ const Background = styled(motion.div)`
     rgba(255, 255, 255, 0) 100%
   ); */
   height: 300px;
-  border-radius: 0px 0px 100px 0px;
+  border-radius: 0px 0px 60px 0px;
 `;
 
 const sidebar = {

@@ -1,7 +1,7 @@
 export const faqs = [
   {
     q: "Are all of your snack boxes vegan?",
-    a: "Yes! We only sell products that are both vegan and non-GMO.",
+    a: "Yes! We only carry products that are vegan and non-GMO.",
   },
   {
     q: "Do any of your products contain sugar that was refined with bone char?",
@@ -18,7 +18,7 @@ export const faqs = [
       "Yes! We make custom snack boxes and baskets for people and businesses alike. Rather it's your friend, partner, kid, co-worker, boss, or employees, we'd love to help. Please get in touch and let's chat!",
   },
   {
-    q: "Do you plan to offer more snack boxes in the future?",
+    q: "Do you plan to offer more snack boxes?",
     a:
       "Yes! We are working on a couple new snack boxes, including a 100% Gluten Free variety. You can join our newsletter and be the first to know when they will be available!",
   },

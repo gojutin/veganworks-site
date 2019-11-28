@@ -31,7 +31,6 @@ const UnorderedList = styled(motion.ul)`
 export const Navigation: React.FC<{
   items: Item[];
   onClick: () => void;
-  isOpen: boolean;
 }> = ({ items, onClick }) => {
   const renderItems = items.map(i => (
     <MenuItem item={i} key={i.title} onClick={onClick} />
