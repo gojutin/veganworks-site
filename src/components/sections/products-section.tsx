@@ -27,7 +27,11 @@ const ProductsSection: React.FC<ProductsSectionProps> = () => {
               Name
               Availability
               Image {
-                url
+                thumbnails {
+                  large {
+                    url
+                  }
+                }
               }
               Link
               Price

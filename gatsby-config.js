@@ -21,6 +21,12 @@ const config = {
         name: "images",
       },
     },
+    // {
+    //   baseId: contentBaseId,
+    //   tableName: 'home_page',
+    //   tableView: viewAll,
+    //   mapping: { 'pictures': `fileNode` },
+    // },
     {
       resolve: `gatsby-source-airtable`,
       options: {

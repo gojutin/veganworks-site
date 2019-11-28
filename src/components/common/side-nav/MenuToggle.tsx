@@ -48,8 +48,8 @@ const path3Variants = {
   open: { d: "M 3 2.5 L 17 16.346" },
 };
 
-export const MenuToggle = ({ toggle }) => (
-  <Button onClick={toggle} name="Menu Toggle">
+export const MenuToggle: React.FC<{ toggle: () => void }> = ({ toggle }) => (
+  <Button onClick={toggle} aria-label="Menu Toggle">
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path variants={path1Variants} />
       <Path
