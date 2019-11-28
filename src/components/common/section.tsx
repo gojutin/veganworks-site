@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledSection = styled.section<{ bg: string }>`
   background: ${props => props.bg};
   padding: 30px 10px;
-  height: ${({ theme }) => (theme.screens.sm ? "100vh" : "auto")};
+  min-height: ${({ theme }) => (theme.screens.sm ? "100vh" : "auto")};
 `;
 
 const SectionTitle = styled.h3<{ color: string }>`
