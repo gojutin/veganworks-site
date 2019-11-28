@@ -11,7 +11,12 @@ const Contact = () => {
     <Layout bg="white">
       <SEO title="Contact VeganWorks" />
       <CoverImage>
-        <Section bg="rgba(0,0,0,.6)" title="Contact Us" titleColor="white">
+        <Section
+          bg="rgba(0,0,0,.6)"
+          title="Contact Us"
+          titleColor="white"
+          style={{ height: "100vh" }}
+        >
           <div style={{ padding: "10px" }}>
             <ContactForm />
           </div>

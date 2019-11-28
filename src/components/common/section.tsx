@@ -4,7 +4,6 @@ import styled from "styled-components";
 const StyledSection = styled.section<{ bg: string }>`
   background: ${props => props.bg};
   padding: 30px 10px;
-  min-height: ${({ theme }) => (theme.screens.sm ? "100vh" : "auto")};
 `;
 
 const SectionTitle = styled.h3<{ color: string }>`
@@ -21,7 +20,7 @@ const SectionTitle = styled.h3<{ color: string }>`
 type SectionProps = {
   title?: string;
   titleColor?: string;
-
+  style?: any;
   bg?: string;
 };
 
@@ -30,9 +29,10 @@ const Section: React.FC<SectionProps> = ({
   titleColor = "#333",
   bg = "white",
   children,
+  style,
 }) => {
   return (
-    <StyledSection bg={bg}>
+    <StyledSection bg={bg} style={style}>
       <SectionTitle color={titleColor}>{title}</SectionTitle>
       {children}
     </StyledSection>
