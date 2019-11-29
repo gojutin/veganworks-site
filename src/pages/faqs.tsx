@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import { CoverImage } from "../components/common/main-cover";
-import { Link } from "../components/common/link";
-import { Layout } from "../components/common/layout";
-import { SEO } from "../components/common/seo";
-import { Section } from "../components/common/section";
+import { CoverImagePageLayout } from "../components/common/cover-image-page-layout";
 
 import { faqs } from "../constants/faqs";
 
@@ -25,10 +21,6 @@ const Answer = styled.p`
   border-bottom: 1px dashed ${({ theme }) => theme.colors.gray7};
 `;
 
-const Container = styled.div`
-  min-width: 70vw;
-`;
-
 const Wrapper = styled.div`
   padding: 10px 20px;
   max-width: 960px;
@@ -46,22 +38,9 @@ const Contact = () => {
     );
   });
   return (
-    <Layout bg="white">
-      <SEO title="VeganWorks FAQS" />
-      <CoverImage>
-        <Section bg="rgba(0,0,0,.8)" title="FAQS" titleColor="white">
-          <Container>
-            <Wrapper>
-              {renderFAQS}
-              <div style={{ display: "flex", justifyContent: "space-around" }}>
-                <Link to="/">Go Back</Link>
-                <Link to="/contact">Contact Us</Link>
-              </div>
-            </Wrapper>
-          </Container>
-        </Section>
-      </CoverImage>
-    </Layout>
+    <CoverImagePageLayout title="FAQs">
+      <Wrapper>{renderFAQS}</Wrapper>
+    </CoverImagePageLayout>
   );
 };
 

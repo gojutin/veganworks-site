@@ -67,7 +67,7 @@ const FavoriteBrandsSection: React.FC = () => {
 
   return (
     <Section
-      bg="linear-gradient(#fff, #fff)"
+      bg="linear-gradient(#fff, rgb(253,253,253))"
       title="Bringing You Our Favorite Brands"
     >
       <br />

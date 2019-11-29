@@ -59,7 +59,7 @@ const CommunitySolidaritySection = () => {
       <CoverImage
         Tag="section"
         fluid={imageData}
-        alt="Community Solidarity Collage"
+        alt="Community Solidarity Cover Image"
       >
         <InfoBox>
           <h4>For every snack box sold, we donate 25 cents to</h4>

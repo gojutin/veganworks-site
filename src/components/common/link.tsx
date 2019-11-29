@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { Link as GLink, GatsbyLinkProps } from "gatsby";
+import { motion } from "framer-motion";
 
 const baseStyles = css`
   display: block;
@@ -10,7 +11,7 @@ const baseStyles = css`
   }
 `;
 
-const StyledLink = styled.a.attrs(() => ({
+const StyledLink = styled(motion.a).attrs(() => ({
   target: "_blank",
   rel: "noopener noreferrer",
 }))<{ color?: string }>`
