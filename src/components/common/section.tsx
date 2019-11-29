@@ -20,7 +20,7 @@ const SectionTitle = styled.h3<{ color: string }>`
 type SectionProps = {
   title?: string;
   titleColor?: string;
-  style?: any;
+  style?: React.CSSProperties;
   bg?: string;
 };
 
