@@ -38,7 +38,7 @@ const variants = {
     },
   },
   closed: {
-    y: 50,
+    y: 25,
     opacity: 0,
     scale: 1,
     transition: {

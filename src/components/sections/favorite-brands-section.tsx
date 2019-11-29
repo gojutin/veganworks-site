@@ -31,12 +31,14 @@ const Wrapper = styled(motion.div)`
   }
 `;
 
-const BrandLogo = styled(Img)`
+const StyledBrandLogo = styled(Img)`
   margin: 20px 30px;
   width: 140px;
   text-align: center;
   padding: 10px 20px;
 `;
+
+const BrandLogo = React.memo(StyledBrandLogo);
 
 const FavoriteBrandsSection: React.FC = () => {
   const data = useBrandLogos();

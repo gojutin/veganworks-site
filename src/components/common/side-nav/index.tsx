@@ -26,7 +26,7 @@ const Background = styled(motion.div)`
     rgba(255, 255, 255, 0) 77%,
     rgba(255, 255, 255, 0) 100%
   ); */
-  height: 280px;
+  height: 250px;
   border-radius: 0px 0px 40px 0px;
 `;
 

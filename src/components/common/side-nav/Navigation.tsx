@@ -21,7 +21,6 @@ type Item = {
 
 const UnorderedList = styled(motion.ul)`
   margin: 0;
-  padding: 0;
   padding: 25px;
   position: absolute;
   top: 70px;

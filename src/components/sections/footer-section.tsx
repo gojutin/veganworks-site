@@ -9,20 +9,27 @@ const StyledFooter = styled.footer`
   margin-top: -60px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: flex-end;
+  justify-content: ${({ theme }) =>
+    theme.screens.sm ? "flex-start" : "space-evenly"};
   background: #18cdb5;
   color: white;
-  text-align: center;
   font-family: Alice;
-  padding: 20px;
+  padding: 20px 40px;
 `;
 
 const footerLinks = [
+  { title: "@VeganWorksHQ", href: "https://twitter.com/veganworkshq" },
   { title: "Contact Us", to: "/contact" },
   { title: "FAQs", to: "/faqs" },
-  { title: "@VeganWorksHQ", href: "https://twitter.com/veganworkshq" },
+  { title: "Privacy Policy", to: "/privacy" },
+  { title: "Terms Of Use", to: "/terms" },
 ];
+
+const StyledDiv = styled.div`
+  color: black;
+  width: ${({ theme }) => (theme.screens.sm ? "100%" : "auto")};
+`;
 
 const FooterSection = () => {
   const { colors } = useTheme();
@@ -34,7 +41,7 @@ const FooterSection = () => {
         color={colors.secondary7}
         to={item.to || null}
         href={item.href || null}
-        style={{ paddingBottom: "10px", textAlign: "left" }}
+        style={{ marginBottom: "10px", textAlign: "left" }}
       >
         {item.title}
       </Link>
@@ -45,7 +52,7 @@ const FooterSection = () => {
       <img src={FooterWave} alt="wave" />
       <StyledFooter>
         <div>{renderFooterLinks}</div>
-        <span style={{ color: "black" }}>&reg; 2019 VeganWorks, Inc.</span>
+        <StyledDiv>&reg; 2019 VeganWorks, Inc.</StyledDiv>
       </StyledFooter>
     </>
   );
