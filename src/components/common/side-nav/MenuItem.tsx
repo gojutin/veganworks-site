@@ -57,7 +57,11 @@ type Props = {
 export const MenuItem: React.FC<Props> = ({ item, onClick }) => {
   return (
     <li>
-      <StyledLink activeStyle={{ color: "#c711fc" }} to={item.link}>
+      <StyledLink
+        activeStyle={{ color: "#c711fc" }}
+        to={item.link}
+        // style={{ textDecoration: "none" }}
+      >
         <Wrapper
           variants={variants}
           whileTap={{ scale: 0.98 }}

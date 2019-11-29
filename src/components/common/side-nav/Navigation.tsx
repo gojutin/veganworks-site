@@ -24,7 +24,7 @@ const UnorderedList = styled(motion.ul)`
   padding: 0;
   padding: 25px;
   position: absolute;
-  top: 100px;
+  top: 70px;
   width: 230px;
 `;
 

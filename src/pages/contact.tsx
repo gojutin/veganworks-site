@@ -15,7 +15,7 @@ const Contact = () => {
           bg="rgba(0,0,0,.6)"
           title="Contact Us"
           titleColor="white"
-          style={{ height: "100vh" }}
+          style={{ minHeight: "100vh" }}
         >
           <div style={{ padding: "10px" }}>
             <ContactForm />

@@ -9,7 +9,7 @@ const Nav = styled(motion.nav)`
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: 200px;
   z-index: 10000;
 `;
 
@@ -17,7 +17,6 @@ const Background = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
   width: 200px;
   background: rgba(255, 255, 255, 1);
   /* background: linear-gradient(
@@ -27,7 +26,7 @@ const Background = styled(motion.div)`
     rgba(255, 255, 255, 0) 77%,
     rgba(255, 255, 255, 0) 100%
   ); */
-  height: 300px;
+  height: 280px;
   border-radius: 0px 0px 40px 0px;
 `;
 

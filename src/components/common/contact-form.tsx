@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useTheme } from "../../styles";
 
 // Components
 import { Input } from "./input";
@@ -24,7 +23,6 @@ const FieldsWrapper = styled.div`
 `;
 
 const ContactForm = () => {
-  const { secondary3 } = useTheme().colors;
   return (
     <Container>
       <p style={{ color: "white" }}>
@@ -53,9 +51,7 @@ const ContactForm = () => {
           <TextArea name="message" placeholder="Your Message" required={true} />
         </FieldsWrapper>
       </NetlifyForm>
-      <Link style={{ color: "white" }} to="/">
-        Go Back
-      </Link>
+      <Link to="/">Go Back</Link>
     </Container>
   );
 };

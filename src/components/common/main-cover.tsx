@@ -4,14 +4,14 @@ import BackgroundImage from "gatsby-background-image";
 import { useVeganWorksCoverImage } from "../../queries/useVeganWorksCoverImage";
 
 const StyledCoverImage = styled(BackgroundImage)`
-  align-items: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-items: center;
   justify-content: center;
-  margin: 0;
   min-height: 100vh;
+  height: 100%;
+  margin: 0;
   width: 100%;
   z-index: 0;
 `;

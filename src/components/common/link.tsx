@@ -36,7 +36,7 @@ export const Link: React.FC<GatsbyLinkProps<null> | AnchorLink> = ({
 }) => {
   if (to) {
     return (
-      <GatsbyLink to={to} color={color}>
+      <GatsbyLink style={style} to={to} color={color}>
         {children}
       </GatsbyLink>
     );
