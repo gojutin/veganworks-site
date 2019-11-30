@@ -8,7 +8,7 @@ import { Link } from "./link";
 import { Section } from "./section";
 
 const Wrapper = styled.div`
-  padding: 10px 20px;
+  padding: 10px;
   max-width: 960px;
   margin: 0 auto;
   padding-bottom: 50px;
@@ -17,11 +17,17 @@ const Wrapper = styled.div`
 const sectionStyles = {
   minHeight: "100vh",
   minWidth: "70vw",
-  padding: "30px",
+  padding: "10px",
   color: "white",
   maxWidth: "700px",
   margin: "0 auto",
 };
+
+const LinkWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+`;
 
 interface Props {
   title: string;
@@ -49,10 +55,10 @@ export const CoverImagePageLayout: React.FC<Props> = ({
           style={sectionStyles}
         >
           <Wrapper>{renderChildren}</Wrapper>
-          <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <LinkWrapper>
             <Link to="/">Go Back</Link>
             <Link to="/contact">Contact Us</Link>
-          </div>
+          </LinkWrapper>
         </Section>
       </CoverImage>
     </Layout>

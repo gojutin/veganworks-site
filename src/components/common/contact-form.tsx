@@ -9,7 +9,7 @@ import { Link } from "./link";
 
 const Container = styled.div`
   text-align: center;
-  padding: 15px;
+  padding: 5px;
   p {
     font-family: Alice, Helvetica, sans-serif;
     font-size: 20px;
@@ -51,7 +51,6 @@ const ContactForm = () => {
           <TextArea name="message" placeholder="Your Message" required={true} />
         </FieldsWrapper>
       </NetlifyForm>
-      <Link to="/">Go Back</Link>
     </Container>
   );
 };

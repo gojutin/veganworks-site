@@ -22,10 +22,10 @@ const Answer = styled.p`
 `;
 
 const Wrapper = styled.div`
-  padding: 10px 20px;
+  padding: 10px;
   max-width: 960px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 `;
 
 const Contact = () => {

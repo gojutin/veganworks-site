@@ -16,7 +16,7 @@ const SectionWrapper = styled.section`
 `;
 
 const Container = styled.div`
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 `;
 
