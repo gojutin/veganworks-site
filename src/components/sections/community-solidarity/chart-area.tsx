@@ -5,13 +5,17 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
+import { Link } from "../../common/link";
+
 const SectionWrapper = styled.section`
   background: ${({ theme }) => theme.colors.secondary9};
-  padding: 80px 10px;
+  padding: 40px 10px;
   min-height: 600px;
+  text-align: center;
+  color: white;
 `;
 
-const ChartWrapper = styled.div`
+const Container = styled.div`
   max-width: 500px;
   margin: 0 auto;
 `;
@@ -24,7 +28,7 @@ const InfoMotionWrapper = styled(motion.div)`
   font-family: Alice;
 
   h3 {
-    font-size: 50px;
+    font-size: 60px;
     padding: 0px;
     margin: 0px;
     line-height: 50px;
@@ -32,23 +36,23 @@ const InfoMotionWrapper = styled(motion.div)`
   }
 
   span.lbs {
-    font-size: 60px;
+    font-size: 70px;
   }
   p {
-    font-size: 20px;
+    font-size: 22px;
     padding: 0;
     margin: 0;
     color: ${({ theme }) => theme.colors.secondary3};
   }
+  small {
+    font-size: 18px;
+  }
 `;
 
-type CommunitySolidarityChartProps = {
+interface Props {
   lbs: number;
-};
-
-const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
-  lbs,
-}) => {
+}
+const ChartArea: React.FC<Props> = ({ lbs }) => {
   const [ref, inView] = useInView({
     threshold: 0,
   });
@@ -59,7 +63,7 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
 
   return (
     <SectionWrapper ref={ref}>
-      <ChartWrapper>
+      <Container>
         <GaugeChart
           id="pounds"
           nrOfLevels={18}
@@ -70,6 +74,7 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
           needleBaseColor="#333"
           arcWidth={0.2}
         />
+
         <InfoMotionWrapper
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -82,14 +87,24 @@ const CommunitySolidarityChart: React.FC<CommunitySolidarityChartProps> = ({
             POUNDS
           </h3>
           <p>of fresh groceries and counting!</p>
-          <p style={{ color: "white", padding: "20px", fontSize: "18px" }}>
-            For every dollar donated, Community Solidarity is able to provide
+
+          <p style={{ color: "white", padding: "20px", fontSize: "15px" }}>
+            *For every dollar donated, Community Solidarity is able to provide
             eight pounds of fresh groceries to a family in need.
           </p>
+          <small style={{ color: "white" }}>
+            Learn more at{" "}
+            <Link
+              style={{ display: "inline-block" }}
+              href="https://www.communitysolidarity.org"
+            >
+              CommunitySolidarity.org
+            </Link>
+          </small>
         </InfoMotionWrapper>
-      </ChartWrapper>
+      </Container>
     </SectionWrapper>
   );
 };
 
-export { CommunitySolidarityChart };
+export { ChartArea };

@@ -69,6 +69,7 @@ const FavoriteBrandsSection: React.FC = () => {
     <Section
       bg="linear-gradient(#fff, rgb(253,253,253))"
       title="Bringing You Our Favorite Brands"
+      style={{ padding: "100px 20px" }}
     >
       <br />
       <br />
