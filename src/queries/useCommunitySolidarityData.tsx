@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 const useCommunitySolidarityData = () => {
   const data = useStaticQuery(graphql`
     query {
-      desktop: file(relativePath: { eq: "community-solidarity-cover3.jpg" }) {
+      desktop: file(relativePath: { eq: "community-solidarity-cover9.jpg" }) {
         childImageSharp {
           fluid(quality: 98, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
@@ -12,8 +12,6 @@ const useCommunitySolidarityData = () => {
       }
       csLogo: file(relativePath: { eq: "community-solidarity-logo.png" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
           fluid(quality: 98, maxWidth: 500) {
             ...GatsbyImageSharpFluid_withWebp
           }
