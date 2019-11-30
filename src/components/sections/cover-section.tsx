@@ -27,22 +27,47 @@ const Tagline = styled(motion.h3)`
   text-align: center;
 `;
 
+const Banner = styled(motion.aside).attrs(() => ({
+  initial: { y: -60 },
+  animate: { y: 0 },
+  transition: { delay: 2 },
+}))`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(26, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px;
+`;
+
+const BannerButton = styled.button`
+  border: none;
+  background: transparent;
+  color: ${({ theme }) => theme.colors.primary4};
+  cursor: pointer;
+  outline: none;
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
 const CoverSection: React.FC = () => {
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const { scrollYProgress } = useViewportScroll();
-
-  // useEffect(() => {
-  //   scrollYProgress.onChange(v => {
-  //     if (v) {
-  //       setScrollPosition(v);
-  //     }
-  //   });
-  // }, [scrollYProgress]);
-
+  const scrollToNewsletter = () => {
+    document.getElementById("newsletter").scrollIntoView();
+  };
   const isSmall = useTheme().screens.sm;
   const logo = isSmall ? VeganWorksLogoSmall : VeganWorksLogo;
   return (
     <CoverImage>
+      <Banner>
+        We are working on a new snack box!
+        <BannerButton onClick={scrollToNewsletter}>
+          Sign up for our newsletter
+        </BannerButton>
+        to stay informed.
+      </Banner>
       <Wrapper>
         <StyledLogo
           src={logo}

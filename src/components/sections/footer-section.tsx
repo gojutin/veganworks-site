@@ -38,7 +38,7 @@ const FooterSection = () => {
     return (
       <Link
         key={item.title}
-        color={colors.secondary7}
+        color={colors.primary8}
         to={item.to || null}
         href={item.href || null}
         style={{ marginBottom: "10px", textAlign: "left" }}

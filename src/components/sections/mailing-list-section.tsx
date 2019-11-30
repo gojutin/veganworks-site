@@ -13,6 +13,7 @@ const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 100px;
 `;
 
 const Form = styled.form`
@@ -60,7 +61,12 @@ const MailingListSection = () => {
   );
 
   return (
-    <Section title="Join Our Mailing List" titleColor="#333" bg={"white"}>
+    <Section
+      id="newsletter"
+      title="Join Our Mailing List"
+      titleColor="#333"
+      bg={"white"}
+    >
       <FormWrapper>
         <h3>Stay up to date with our new products and promotions.</h3>
         <br />

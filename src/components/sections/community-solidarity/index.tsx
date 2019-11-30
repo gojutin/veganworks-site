@@ -6,9 +6,10 @@ import { useCommunitySolidarityData } from "../../../queries/useCommunitySolidar
 import Img from "gatsby-image";
 
 const CoverImage = styled(BackgroundImage)`
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
+  width: auto;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +32,7 @@ const InfoText = styled.div`
   text-align: center;
   p {
     font-size: 1.4rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   border: 4px solid #ff0066;
 `;
