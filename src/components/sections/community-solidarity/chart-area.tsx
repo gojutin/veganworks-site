@@ -28,7 +28,7 @@ const InfoMotionWrapper = styled(motion.div)`
   font-family: Alice;
 
   h3 {
-    font-size: 60px;
+    font-size: 50px;
     padding: 0px;
     margin: 0px;
     line-height: 50px;
@@ -36,7 +36,7 @@ const InfoMotionWrapper = styled(motion.div)`
   }
 
   span.lbs {
-    font-size: 70px;
+    font-size: 60px;
   }
   p {
     font-size: 22px;

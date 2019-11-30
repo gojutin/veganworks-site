@@ -26,11 +26,12 @@ const InfoSection = styled.section`
 const InfoText = styled.div`
   max-width: 700px;
   width: 90%;
-  margin: ${({ theme }) => (theme.screens.sm ? "20px" : "50px auto")};
+  margin: ${({ theme }) => (theme.screens.sm ? "50px 20px" : "50px auto")};
   padding: 30px 0px 10px 0px;
   text-align: center;
   p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
   }
   border: 4px solid #ff0066;
 `;
