@@ -14,7 +14,7 @@ import {
   FooterSection,
 } from "../components/sections";
 
-const App = () => (
+const App: React.FC = () => (
   <Layout>
     <SEO />
     <CoverSection />

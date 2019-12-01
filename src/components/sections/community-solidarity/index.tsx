@@ -6,9 +6,9 @@ import { useCommunitySolidarityData } from "../../../queries/useCommunitySolidar
 import Img from "gatsby-image";
 
 const CoverImage = styled(BackgroundImage)`
-  min-height: 100vh;
+  min-height: ${({theme}) => theme.screens.sm ? '40vh' : '100vh'};
   width: auto;
-  background-size: cover;
+  background-size: ${({theme}) => theme.screens.sm ? 'contain' : 'cover'};
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;

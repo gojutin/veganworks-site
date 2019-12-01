@@ -28,18 +28,23 @@ const Tagline = styled(motion.h3)`
 `;
 
 const Banner = styled(motion.aside).attrs(() => ({
-  initial: { y: -60 },
-  animate: { y: 0 },
+  initial: { y: -60, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
   transition: { delay: 2 },
 }))`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(26, 0, 0, 0.8);
+  background: rgba(0, 0, 26, 0.8);
   color: white;
   text-align: center;
   padding: 10px;
+
+  .banner-container {
+    max-width: 75%;
+    margin: 0 auto;
+  }
 `;
 
 const BannerButton = styled.button`
@@ -62,11 +67,13 @@ const CoverSection: React.FC = () => {
   return (
     <CoverImage>
       <Banner>
-        We are working on a new snack box!
-        <BannerButton onClick={scrollToNewsletter}>
-          Sign up for our newsletter
-        </BannerButton>
-        to stay informed.
+        <div className="banner-container">
+          We are working on a new snack box!
+          <BannerButton onClick={scrollToNewsletter}>
+            Sign up for our newsletter
+          </BannerButton>
+          to be the first to know when it&apos;s available.
+        </div>
       </Banner>
       <Wrapper>
         <StyledLogo

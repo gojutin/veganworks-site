@@ -3,7 +3,7 @@ import React from "react";
 import { CoverImagePageLayout } from "../components/common/cover-image-page-layout";
 import { Link } from "../components/common/link";
 
-const Privacy = () => {
+const Privacy: React.FC = () => {
   return (
     <CoverImagePageLayout title="Privacy Policy">
       <h3>Your privacy is important to us.</h3>

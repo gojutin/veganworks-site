@@ -79,7 +79,7 @@ const StyledText = styled(motion.p).attrs(() => ({
   font-size: 30px;
 `;
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
     <Layout menu={false}>
       <SEO title="404: Not found" />

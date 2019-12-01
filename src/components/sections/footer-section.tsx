@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
   align-items: flex-end;
   justify-content: ${({ theme }) =>
     theme.screens.sm ? "flex-start" : "space-evenly"};
-  background: #18cdb5;
+  background: #48ead4;
   color: white;
   font-family: Alice;
   padding: 20px 40px;

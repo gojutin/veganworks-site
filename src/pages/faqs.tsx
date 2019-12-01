@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   margin-bottom: 10px;
 `;
 
-const Contact = () => {
+const FAQs: React.FC = () => {
   const renderFAQS = faqs.map(({ q, a }) => {
     return (
       <React.Fragment key={q}>
@@ -44,4 +44,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default FAQs;
