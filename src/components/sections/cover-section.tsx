@@ -53,6 +53,7 @@ const BannerButton = styled.button`
   color: ${({ theme }) => theme.colors.primary4};
   cursor: pointer;
   outline: none;
+  padding: 0px 5px;
   :hover {
     text-decoration: underline;
   }
