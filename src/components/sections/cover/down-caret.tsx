@@ -19,7 +19,7 @@ const StyledDownCaret = styled(motion.img)`
   color: white;
   font-size: 20px;
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
 `;
 
 export const DownCaret: React.FC = () => {

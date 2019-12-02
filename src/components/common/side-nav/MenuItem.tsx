@@ -23,7 +23,7 @@ const Wrapper = styled(motion.div)`
   align-items: center;
   cursor: pointer;
   font-size: 18px;
-  width: 240px;
+  width: 200px;
   border-radius: 0px 100px 100px 0px;
   text-transform: uppercase;
   background: transparent;

@@ -36,9 +36,10 @@ const FAQs: React.FC = () => {
 
   useEffect(() => {
     const filteredFAQs = faqs.filter(item => {
+      const term = searchTerm.toLowerCase();
       return (
-        item.q.toLowerCase().includes(searchTerm) ||
-        item.a.toLowerCase().includes(searchTerm)
+        item.q.toLowerCase().includes(term) ||
+        item.a.toLowerCase().includes(term)
       );
     });
     setFilteredData(filteredFAQs);
