@@ -23,6 +23,7 @@ type SectionProps = {
   style?: React.CSSProperties;
   bg?: string;
   id?: string;
+  className?: string;
 };
 
 const Section: React.FC<SectionProps> = ({
@@ -32,9 +33,10 @@ const Section: React.FC<SectionProps> = ({
   children,
   style,
   id,
+  className,
 }) => {
   return (
-    <StyledSection bg={bg} style={style} id={id}>
+    <StyledSection className={className} bg={bg} style={style} id={id}>
       <SectionTitle color={titleColor}>{title}</SectionTitle>
       {children}
     </StyledSection>

@@ -14,15 +14,15 @@ const Wrapper = styled.div`
   padding-bottom: 50px;
 `;
 
-const sectionStyles = {
-  height: "100vh",
-  minWidth: "70vw",
-  padding: "10px",
-  color: "white",
-  maxWidth: "700px",
-  margin: "0 auto",
-  overflow: "scroll",
-};
+const CoverImageSection = styled(Section)`
+  height: 100vh;
+  min-width: ${({ theme }) => (theme.screens.sm ? "100vw" : "65vw")};
+  padding: 10px;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: scroll;
+`;
 
 const LinkWrapper = styled.div`
   display: flex;
@@ -49,18 +49,17 @@ export const CoverImagePageLayout: React.FC<Props> = ({
     <Layout bg="rgb(0,0,26)">
       <SEO title={title} />
       <CoverImage>
-        <Section
+        <CoverImageSection
           bg="rgba(0,0,26,.8)"
           title={title}
           titleColor="white"
-          style={sectionStyles}
         >
           <Wrapper>{renderChildren}</Wrapper>
           <LinkWrapper>
             <Link to="/">Go Back</Link>
             <Link to="/contact">Contact Us</Link>
           </LinkWrapper>
-        </Section>
+        </CoverImageSection>
       </CoverImage>
     </Layout>
   );
