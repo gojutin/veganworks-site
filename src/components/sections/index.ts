@@ -1,4 +1,4 @@
-export { CoverSection } from "./cover-section";
+export { CoverSection } from "./cover";
 export { CommunitySolidaritySection } from "./community-solidarity";
 export { FavoriteBrandsSection } from "./favorite-brands-section";
 export { MailingListSection } from "./mailing-list-section";

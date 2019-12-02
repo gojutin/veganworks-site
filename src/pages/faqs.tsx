@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
 // Components
 import { CoverImagePageLayout } from "../components/common/cover-image-page-layout";
+import { Input } from "../components/common/input";
 
 import { faqs } from "../constants/faqs";
 
@@ -29,17 +31,61 @@ const Wrapper = styled.div`
 `;
 
 const FAQs: React.FC = () => {
-  const renderFAQS = faqs.map(({ q, a }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredData, setFilteredData] = useState(faqs);
+
+  useEffect(() => {
+    const filteredFAQs = faqs.filter(item => {
+      return (
+        item.q.toLowerCase().includes(searchTerm) ||
+        item.a.toLowerCase().includes(searchTerm)
+      );
+    });
+    setFilteredData(filteredFAQs);
+  }, [searchTerm]);
+
+  const handleSearch = e => {
+    setSearchTerm(e.target.value);
+  };
+
+  const renderFAQS = filteredData.map(({ q, a }) => {
     return (
-      <React.Fragment key={q}>
+      <motion.div
+        key={q}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
         <Question>{q}</Question>
         <Answer>{a}</Answer>
-      </React.Fragment>
+      </motion.div>
     );
   });
+
+  const searchText = filteredData.length ? (
+    <p>
+      Showing {filteredData.length} of {faqs.length}
+    </p>
+  ) : (
+    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      No matches for "{searchTerm}"
+    </motion.p>
+  );
+
   return (
     <CoverImagePageLayout title="FAQs">
-      <Wrapper>{renderFAQS}</Wrapper>
+      <Input
+        value={searchTerm}
+        onChange={handleSearch}
+        type="search"
+        placeholder="Search FAQs"
+      />
+      <div style={{ paddingLeft: "10px" }}>{searchText}</div>
+
+      <Wrapper>
+        <AnimatePresence>{renderFAQS}</AnimatePresence>
+      </Wrapper>
     </CoverImagePageLayout>
   );
 };

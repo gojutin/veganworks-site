@@ -15,12 +15,13 @@ const Wrapper = styled.div`
 `;
 
 const sectionStyles = {
-  minHeight: "100vh",
+  height: "100vh",
   minWidth: "70vw",
   padding: "10px",
   color: "white",
   maxWidth: "700px",
   margin: "0 auto",
+  overflow: "scroll",
 };
 
 const LinkWrapper = styled.div`
