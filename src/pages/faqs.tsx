@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 // Components
 import { CoverImagePageLayout } from "../components/common/cover-image-page-layout";
-import { Input } from "../components/common/input";
+import { Search } from "../components/common/search";
+// import { useSearch } from "../hooks/useSearch";
 
 import { faqs } from "../constants/faqs";
 
@@ -64,25 +65,38 @@ const FAQs: React.FC = () => {
     );
   });
 
+  const ClearButton = styled.button`
+    border: none;
+    background: none;
+    padding: 0px 8px;
+    color: ${({ theme }) => theme.colors.secondary3};
+    cursor: pointer;
+    text-decoration: underline;
+  `;
+
+  const clearSearch = () => {
+    setSearchTerm("");
+  };
+
   const searchText = filteredData.length ? (
     <p>
       Showing {filteredData.length} of {faqs.length}
     </p>
   ) : (
     <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      No matches for "{searchTerm}"
+      No matches for &quot;{searchTerm}&quot;.
+      <ClearButton onClick={clearSearch}>clear</ClearButton>
     </motion.p>
   );
 
   return (
     <CoverImagePageLayout title="FAQs">
-      <Input
+      <Search
         value={searchTerm}
         onChange={handleSearch}
-        type="search"
         placeholder="Search FAQs"
       />
-      <div style={{ paddingLeft: "10px" }}>{searchText}</div>
+      <div style={{ paddingLeft: "35px" }}>{searchText}</div>
 
       <Wrapper>
         <AnimatePresence>{renderFAQS}</AnimatePresence>

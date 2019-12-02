@@ -28,7 +28,7 @@ const BannerButton = styled.button`
   color: ${({ theme }) => theme.colors.primary4};
   cursor: pointer;
   outline: none;
-  padding: 0px 5px;
+  padding: 0px 5px 0px 10px;
   :hover {
     text-decoration: underline;
   }

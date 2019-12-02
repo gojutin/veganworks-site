@@ -6,10 +6,9 @@ import { useCommunitySolidarityData } from "../../../queries/useCommunitySolidar
 import Img from "gatsby-image";
 
 const CoverImage = styled(BackgroundImage)`
-  min-height: ${({theme}) => theme.screens.sm ? '40vh' : '100vh'};
+  min-height: ${({ theme }) => (theme.screens.sm ? "40vh" : "100vh")};
   width: auto;
-  background-size: ${({theme}) => theme.screens.sm ? 'contain' : 'cover'};
-  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,12 +21,13 @@ const InfoSection = styled.section`
   background: ${({ theme }) => theme.colors.secondary9};
   color: white;
   text-align: center;
+  padding: 30px 10px 10px 10px;
 `;
 
 const InfoText = styled.div`
   max-width: 700px;
   width: 90%;
-  margin: ${({ theme }) => (theme.screens.sm ? "50px 20px" : "50px auto")};
+  margin: ${({ theme }) => (theme.screens.sm ? "50px 20px" : "0 auto")};
   padding: 30px 0px 10px 0px;
   text-align: center;
   p {

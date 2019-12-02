@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/tslint/config */
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,19 +33,17 @@ export const DownCaret: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <AnimatePresence>
-      {show && (
-        <StyledDownCaret
-          initial={{ opacity: 0 }}
-          animate={{ y: [0, 10, 0, 10, 0, 10, 2], opacity: 1 }}
-          transition={bounceTransition}
-          exit={{ scale: 0 }}
-          src={downcaret}
-          height={20}
-          alt="Scroll Down"
-        />
-      )}
-    </AnimatePresence>
+  const maybeRenderDownCaret = show && (
+    <StyledDownCaret
+      initial={{ opacity: 0 }}
+      animate={{ y: [0, 10, 0, 10, 0, 10, 2], opacity: 1 }}
+      transition={bounceTransition}
+      exit={{ scale: 0, opacity: 0 }}
+      src={downcaret}
+      height={20}
+      alt="Scroll Down"
+    />
   );
+
+  return <AnimatePresence>{maybeRenderDownCaret}</AnimatePresence>;
 };
