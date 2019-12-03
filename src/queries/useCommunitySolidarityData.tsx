@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 const useCommunitySolidarityData = () => {
   const data = useStaticQuery(graphql`
     query {
-      desktop: file(relativePath: { eq: "community-solidarity-collage.jpg" }) {
+      desktop: file(relativePath: { eq: "community-solidarity-collage2.jpg" }) {
         childImageSharp {
           fluid(quality: 98, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp

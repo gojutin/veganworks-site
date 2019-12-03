@@ -35,10 +35,10 @@ export const DownCaret: React.FC = () => {
 
   const maybeRenderDownCaret = show && (
     <StyledDownCaret
-      initial={{ opacity: 0 }}
-      animate={{ y: [0, 10, 0, 10, 0, 10, 2], opacity: 1 }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ y: [0, 10, 0, 10, 0, 10], scale: 1, opacity: 1 }}
       transition={bounceTransition}
-      exit={{ scale: 0, opacity: 0 }}
+      exit={{ scale: 0, opacity: 0.2, transition: { delay: 0 } }}
       src={downcaret}
       height={20}
       alt="Scroll Down"
