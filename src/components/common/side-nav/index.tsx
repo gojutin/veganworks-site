@@ -19,13 +19,6 @@ const Background = styled(motion.div)`
   left: 0;
   width: 200px;
   background: rgba(255, 255, 255, 1);
-  /* background: linear-gradient(
-    162deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.8813900560224089) 48%,
-    rgba(255, 255, 255, 0) 77%,
-    rgba(255, 255, 255, 0) 100%
-  ); */
   height: 250px;
   border-radius: 0px 0px 40px 0px;
 `;
@@ -79,7 +72,7 @@ export const SideNav: React.FC<{ items: Item[] }> = ({ items }) => {
 
   return (
     <Nav
-      initial={false}
+      initial={isOpen ? "open" : "closed"}
       animate={isOpen ? "open" : "closed"}
       custom={{ height: "200px" }}
       ref={containerRef}

@@ -23,8 +23,8 @@ const Container = styled.div`
 const InfoMotionWrapper = styled(motion.div)`
   color: white;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: Alice;
 
   h3 {
