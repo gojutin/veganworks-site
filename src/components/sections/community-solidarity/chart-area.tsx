@@ -76,8 +76,8 @@ const ChartArea: React.FC<Props> = ({ lbs }) => {
         />
 
         <InfoMotionWrapper
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
           <h3>
