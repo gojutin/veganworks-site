@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
   align-items: flex-end;
   justify-content: ${({ theme }) =>
     theme.screens.sm ? "flex-start" : "space-evenly"};
-  background: #18CEB5;
+  background: #18ceb5;
   color: white;
   font-family: Alice;
   padding: 20px 40px;
@@ -23,7 +23,7 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  text-align: left; 
+  text-align: left;
   min-width: 300px;
   padding: 4px 0px;
 `;
@@ -42,7 +42,6 @@ const socialLinks = [
 ];
 
 const navLinks = [
-
   { title: "Contact Us", to: "/contact" },
   { title: "FAQs", to: "/faqs" },
   { title: "Privacy Policy", to: "/privacy" },
@@ -62,40 +61,39 @@ const FollowUs = styled.h3`
 const FooterSection = () => {
   const { colors } = useTheme();
 
-  const renderFooterLinks = (values) => values.map(item => {
-    const maybeRenderIcon = item.icon && (
-      <img
-        style={{ marginRight: "10px" }}
-        src={item.icon}
-        width={30}
-        alt={item.title}
-      />
-    );
-    return (
-      <StyledLink
-        key={item.title + (item.href || item.to)}
-        color={colors.primary8}
-        to={item.to || null}
-        href={item.href || null}
-      >
-        <span>{maybeRenderIcon}</span>
+  const renderFooterLinks = values =>
+    values.map(item => {
+      const maybeRenderIcon = item.icon && (
+        <img
+          style={{ marginRight: "10px" }}
+          src={item.icon}
+          width={30}
+          alt={item.title}
+        />
+      );
+      return (
+        <StyledLink
+          key={item.title + (item.href || item.to)}
+          color={colors.primary8}
+          to={item.to || null}
+          href={item.href || null}
+        >
+          <span>{maybeRenderIcon}</span>
 
-        {item.title}
-      </StyledLink>
-    );
-  });
+          {item.title}
+        </StyledLink>
+      );
+    });
   return (
     <>
       <img src={FooterWave} alt="wave" />
       <StyledFooter>
-      <div>{renderFooterLinks(navLinks)}</div>
-      <div>
-        <FollowUs>Follow Us</FollowUs>
-        {renderFooterLinks(socialLinks)}
-        <br />
-      </div>
-     
-    
+        <div>{renderFooterLinks(navLinks)}</div>
+        <div>
+          <FollowUs>Follow Us</FollowUs>
+          {renderFooterLinks(socialLinks)}
+        </div>
+
         <StyledDiv>&reg; 2019 VeganWorks, Inc.</StyledDiv>
       </StyledFooter>
     </>
