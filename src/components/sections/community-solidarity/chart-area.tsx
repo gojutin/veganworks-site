@@ -28,7 +28,7 @@ const InfoMotionWrapper = styled(motion.div)`
   font-family: Alice;
 
   h3 {
-    font-size: 50px;
+    font-size: 55px;
     padding: 0px;
     margin: 0px;
     line-height: 50px;
@@ -36,7 +36,10 @@ const InfoMotionWrapper = styled(motion.div)`
   }
 
   span.lbs {
-    font-size: 60px;
+    font-size: 70px;
+    display: inline-block;
+    min-width: 150px;
+    line-height: 70px;
   }
   p {
     font-size: 22px;
@@ -76,13 +79,13 @@ const ChartArea: React.FC<Props> = ({ lbs }) => {
         />
 
         <InfoMotionWrapper
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
           <h3>
             <span className="lbs">
-              <CountUp end={lbs} />
+              <CountUp start={1000} duration={3} end={lbs} />
             </span>{" "}
             POUNDS
           </h3>

@@ -5,7 +5,7 @@ import { ContactForm } from "../components/common/contact-form";
 
 const Contact: React.FC = () => {
   return (
-    <CoverImagePageLayout title="Contact Us">
+    <CoverImagePageLayout title="Contact Us" hideContact={true}>
       <ContactForm />
     </CoverImagePageLayout>
   );

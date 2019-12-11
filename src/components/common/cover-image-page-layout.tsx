@@ -33,12 +33,14 @@ const LinkWrapper = styled.div`
 interface Props {
   title: string;
   underConstruction?: boolean;
+  hideContact?: boolean;
 }
 
 export const CoverImagePageLayout: React.FC<Props> = ({
   children,
   title,
   underConstruction,
+  hideContact,
 }) => {
   const renderChildren = underConstruction ? (
     <div style={{ textAlign: "center" }}>Coming soon...</div>
@@ -57,7 +59,7 @@ export const CoverImagePageLayout: React.FC<Props> = ({
           <Wrapper>{renderChildren}</Wrapper>
           <LinkWrapper>
             <Link to="/">Go Back</Link>
-            <Link to="/contact">Contact Us</Link>
+            {!hideContact && <Link to="/contact">Contact Us</Link>}
           </LinkWrapper>
         </CoverImageSection>
       </CoverImage>

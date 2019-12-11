@@ -72,7 +72,7 @@ export const SideNav: React.FC<{ items: Item[] }> = ({ items }) => {
 
   return (
     <Nav
-      initial={isOpen ? "open" : "closed"}
+      initial="closed"
       animate={isOpen ? "open" : "closed"}
       custom={{ height: "200px" }}
       ref={containerRef}

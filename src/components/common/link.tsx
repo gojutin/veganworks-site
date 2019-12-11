@@ -14,7 +14,7 @@ const baseStyles = css`
 const StyledLink = styled(motion.a).attrs(() => ({
   target: "_blank",
   rel: "noopener noreferrer",
-}))<{ color?: string }>`
+}))<{ color?: string; className?: string }>`
   ${baseStyles};
   color: ${({ theme, color }) => (color ? color : theme.colors.secondary3)};
 `;
@@ -34,16 +34,17 @@ export const Link: React.FC<GatsbyLinkProps<null> | AnchorLink> = ({
   href,
   color,
   style,
+  className,
 }) => {
   if (to) {
     return (
-      <GatsbyLink style={style} to={to} color={color}>
+      <GatsbyLink style={style} to={to} color={color} className={className}>
         {children}
       </GatsbyLink>
     );
   } else {
     return (
-      <StyledLink style={style} color={color} href={href}>
+      <StyledLink style={style} color={color} href={href} className={className}>
         {children}
       </StyledLink>
     );
