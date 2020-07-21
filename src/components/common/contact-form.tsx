@@ -11,7 +11,7 @@ const Container = styled.div`
   text-align: center;
   padding: 5px;
   p {
-    font-family: Alice, Helvetica, sans-serif;
+    font-family: Alice, Helvetica, Roboto, sans-serif;
     font-size: 20px;
   }
 `;
