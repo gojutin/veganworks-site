@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { GlobalStyles, ThemeProvider } from "../../styles";
 import { SideNav } from "./side-nav";
-import MouseParticles from "react-mouse-particles";
 
 const Main = styled.div<{ bg?: string }>`
   margin: 0px;
@@ -34,7 +33,6 @@ const Layout: React.FC<{ bg?: string; menu?: boolean }> = ({
 }) => {
   return (
     <ThemeProvider>
-      <MouseParticles g={1} color="random" cull="col,image-wrapper" />
       <GlobalStyles />
       {menu && <SideNav items={items} />}
 
